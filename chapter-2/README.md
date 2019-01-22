@@ -100,14 +100,13 @@
       <!-- hearder -->
     <div class="hearder">
         <!-- title -->
-      <span>{{ title }}</span>
+      <span>\{\{ title \}\}</span>
         <!-- link -->
-      <a :href="linkForMore">{{ showMore || '更多>>' }}</a>
+      <a :href="linkForMore">\{\{  showMore  || '更多>>' \}\}</a>
     </div>
        <!-- content -->
     <slot name="content" />
   </div>
 </template>
 ```
-
 前面就是组件开发的一个大致的思想，后续详细内容参考前述文章，这里能大致了解一下组件化开发的优势，结构清晰，延展遍历，不会影响其他部分，潜在的未知威胁更小。既然提到了Vue的组件内容，后续将开始展开学习。

@@ -249,7 +249,7 @@
 
     <li>
         <a href="https://chaihongjun.me" target="blank" class="gitbook-link">
-           Published by Chaihongjun
+            Published by Chaihongjun
         </a>
     </li>
 </ul>
@@ -303,7 +303,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">  
 <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;Vue&#x5BF9;&#x8C61;&#x6784;&#x9020;&#x5668;</span>
 <span class="hljs-keyword">var</span> Constructor = Vue.extend({
-    template:<span class="hljs-string">`&lt;p&gt;{{firstName}}-{{lastName}} aka {{nickName}}&lt;/p&gt;`</span> ,
+    template:<span class="hljs-string">`&lt;p&gt;- aka &lt;/p&gt;`</span> ,
     data():{
     <span class="hljs-keyword">return</span> {
         firstName:<span class="hljs-string">&apos;Chai&apos;</span>,
@@ -317,6 +317,67 @@
 <span class="hljs-keyword">new</span> Constructor().$mount(<span class="hljs-string">&apos;#app&apos;</span>)
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
+<h3 id="vueset">Vue.set</h3>
+<p>&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.set(target,key,value)
+</code></pre>
+<p><code>target</code>&#x662F;&#x8981;&#x66F4;&#x6539;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x6570;&#x7EC4;</p>
+<p><code>key</code> &#x662F;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x662F;&#x5B57;&#x7B26;&#x4E32;</p>
+<p><code>value</code>&#x662F;&#x65B0;&#x7684;&#x503C;</p>
+<p><strong>&#x4F7F;&#x7528;<code>Vue.set</code>&#x53EF;&#x4EE5;&#x8BA9;&#x4FEE;&#x6539;&#x7684;&#x6570;&#x636E;&#x5177;&#x6709;&#x54CD;&#x5E94;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x66F4;&#x65B0;&#x5230;&#x89C6;&#x56FE;&#x3002;&#x4F46;&#x662F;<code>target</code>&#x4E0D;&#x80FD;&#x662F;Vue&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x6839;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x3002;</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    ,&#x6211;&#x4ECA;&#x5E74;&#x5DF2;&#x7ECF;&#x5C81;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x660E;&#x5E74;&#x5C31;NaN&#x5C81;&#x3002;<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+     &#x5A5A;&#x59FB;&#x72B6;&#x6001;&#x662F;&#xFF1A;
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;change&quot;</span>&gt;</span>
+         &#x6539;&#x53D8;&#x72B6;&#x6001;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({ 
+  el: <span class="hljs-string">&apos;#app&apos;</span>,   
+  data: {
+    message: <span class="hljs-string">&apos;Hello!&apos;</span>,
+    age:<span class="hljs-number">99</span>&#xFF0C;
+      otherInfo:{
+           marital:<span class="hljs-string">&apos;&#x5DF2;&#x5A5A;&apos;</span>                   
+   }
+  },
+    methods:{
+           change:<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+         <span class="hljs-comment">// otherInfo &#x4E0D;&#x662F;&#x6839;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;</span>
+         <span class="hljs-comment">// &#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8981;&#x4E48;&#x662F;&#x6570;&#x5B57; &#x8981;&#x4E48;&#x662F;&#x5B57;&#x7B26;&#x4E32; &#x4E0D;&#x8981;&#x4F7F;&#x7528;  app.otherInfo.marital</span>
+         <span class="hljs-comment">// &#x5B57;&#x7B26;&#x4E32; &#x6B63;&#x597D;&#x662F;&#x5C5E;&#x6027;&#x540D;&#x79F0; </span>
+         <span class="hljs-comment">// &#x6570;&#x5B57; &#x5219;&#x662F; &#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x6807;</span>
+          Vue.set(app.otherInfo,<span class="hljs-string">&quot;marital&quot;</span>,<span class="hljs-string">&apos;&#x79BB;&#x5A5A;&apos;</span>)    
+      }                   
+    }
+})
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><code>Vue.set</code>&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x73B0;&#x6709;&#x6216;&#x65B0;&#x589E;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x4E14;&#x4FDD;&#x6301;&#x54CD;&#x5E94;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x4E0D;&#x80FD;&#x662F;Vue&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x6216;&#x6839;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;<code>message</code>&#x548C;<code>age</code>&#x90FD;&#x5C5E;&#x4E8E;<code>data</code>&#x6839;&#x7EA7;&#x522B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;<code>Vue.set</code>&#x4FEE;&#x6539;&#x3002;</p>
+<h3 id="vuedelete">Vue.delete</h3>
+<p>&#x65E2;&#x7136;&#x524D;&#x9762;&#x7684;<code>Vue.set</code>&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x6216;&#x8005;&#x4FEE;&#x6539;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x81EA;&#x7136;&#x5C31;&#x6709;&#x5220;&#x9664;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.delete(target,key)
+</code></pre>
+<p><code>target</code>&#x662F;&#x8981;&#x66F4;&#x6539;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x6570;&#x7EC4;</p>
+<p><code>key</code> &#x662F;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x662F;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x8FD9;&#x4E2A;&#x5168;&#x5C40;&#x7684;API&#x4F7F;&#x7528;&#x573A;&#x666F;&#x5E94;&#x8BE5;&#x5F88;&#x5C11;&#x3002;</p>
+<h3 id="vuedirective">Vue.directive</h3>
+<p>&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x8FC7;&#x4E00;&#x5806;&#x7684;<code>v-*</code>&#x6307;&#x4EE4;&#xFF0C;&#x90A3;&#x4E9B;&#x6307;&#x4EE4;&#x5C5E;&#x4E8E;Vue&#x5185;&#x7F6E;&#x7684;&#x3002;&#x800C;<code>Vue.directive</code>&#x5219;&#x53EF;&#x4EE5;&#x5168;&#x5C40;&#x6CE8;&#x518C;&#x6216;&#x8005;&#x83B7;&#x53D6;&#x6211;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6307;&#x4EE4;&#x3002;</p>
+<pre><code class="lang-javascript">Vue.directive(id,[definition])
+</code></pre>
+<p>&#x770B;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x5B9A;&#x4E49;&#x7684;&#x6A21;&#x5F0F;&#x975E;&#x5E38;&#x7684;&#x7C7B;&#x4F3C;&#x7EC4;&#x4EF6;&#x7684;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<p><code>id</code>  &#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x7684;&#x540D;&#x79F0; &#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;</p>
+<p><code>[definition]</code> &#x5177;&#x4F53;&#x7684;&#x5B9A;&#x4E49;&#x9879;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x51FD;&#x6570;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7684;&#x9009;&#x9879;(&#x94A9;&#x5B50;&#x51FD;&#x6570;)&#x6709;&#xFF1A;</p>
+<p><code>bind</code>  &#x53EA;&#x5728;&#x5143;&#x7D20;&#x88AB;&#x7B2C;&#x4E00;&#x6B21;&#x7ED1;&#x5B9A;&#x5230;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
+<p><code>inserted</code>  &#x88AB;&#x7ED1;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x5728;&#x63D2;&#x5165;&#x5230;&#x7236;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
+<p><code>update</code> &#x7EC4;&#x4EF6;&#x7684;VNode&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
+<p><code>componentUpdated</code> &#x7EC4;&#x4EF6;&#x7684;VNode&#x548C;&#x5B50;VNode&#x5168;&#x90E8;&#x66F4;&#x65B0;&#x4E4B;&#x540E;&#x8C03;&#x7528;</p>
+<p><code>unbind</code> &#x5143;&#x7D20;&#x89E3;&#x7ED1;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
 
                                 
                                 </section>
@@ -356,7 +417,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"其他API，选项和概念","level":"1.4","depth":1,"previous":{"title":"组件声明","level":"1.3.1","depth":2,"path":"chapter-2/components_declaration.md","ref":"chapter-2/components_declaration.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-3/README.md","mtime":"2019-01-22T09:43:47.633Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-22T10:08:48.108Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"其他API，选项和概念","level":"1.4","depth":1,"previous":{"title":"组件声明","level":"1.3.1","depth":2,"path":"chapter-2/components_declaration.md","ref":"chapter-2/components_declaration.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-3/README.md","mtime":"2019-01-22T14:26:25.313Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-22T14:26:39.278Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
