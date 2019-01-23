@@ -249,7 +249,7 @@
 
     <li>
         <a href="https://chaihongjun.me" target="blank" class="gitbook-link">
-            Published by Chaihongjun
+           Published by Chaihongjun
         </a>
     </li>
 </ul>
@@ -342,7 +342,7 @@
     message: <span class="hljs-string">&apos;Hello!&apos;</span>,
     age:<span class="hljs-number">99</span>&#xFF0C;
       otherInfo:{
-           marital:<span class="hljs-string">&apos;&#x5DF2;&#x5A5A;&apos;</span>                   
+        marital:<span class="hljs-string">&apos;&#x5DF2;&#x5A5A;&apos;</span>                
    }
   },
     methods:{
@@ -373,11 +373,128 @@
 <p>&#x770B;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x5B9A;&#x4E49;&#x7684;&#x6A21;&#x5F0F;&#x975E;&#x5E38;&#x7684;&#x7C7B;&#x4F3C;&#x7EC4;&#x4EF6;&#x7684;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#xFF1A;</p>
 <p><code>id</code>  &#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x7684;&#x540D;&#x79F0; &#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;</p>
 <p><code>[definition]</code> &#x5177;&#x4F53;&#x7684;&#x5B9A;&#x4E49;&#x9879;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x51FD;&#x6570;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7684;&#x9009;&#x9879;(&#x94A9;&#x5B50;&#x51FD;&#x6570;)&#x6709;&#xFF1A;</p>
-<p><code>bind</code>  &#x53EA;&#x5728;&#x5143;&#x7D20;&#x88AB;&#x7B2C;&#x4E00;&#x6B21;&#x7ED1;&#x5B9A;&#x5230;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
-<p><code>inserted</code>  &#x88AB;&#x7ED1;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x5728;&#x63D2;&#x5165;&#x5230;&#x7236;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
-<p><code>update</code> &#x7EC4;&#x4EF6;&#x7684;VNode&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
-<p><code>componentUpdated</code> &#x7EC4;&#x4EF6;&#x7684;VNode&#x548C;&#x5B50;VNode&#x5168;&#x90E8;&#x66F4;&#x65B0;&#x4E4B;&#x540E;&#x8C03;&#x7528;</p>
-<p><code>unbind</code> &#x5143;&#x7D20;&#x89E3;&#x7ED1;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x200B;   <code>bind</code>  &#x53EA;&#x5728;&#x5143;&#x7D20;&#x88AB;&#x7B2C;&#x4E00;&#x6B21;&#x7ED1;&#x5B9A;&#x5230;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x200B;   <code>inserted</code>  &#x88AB;&#x7ED1;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x5728;&#x63D2;&#x5165;&#x5230;&#x7236;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x200B;   <code>update</code> &#x7EC4;&#x4EF6;&#x7684;VNode&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x200B;   <code>componentUpdated</code> &#x7EC4;&#x4EF6;&#x7684;VNode&#x548C;&#x5B50;VNode&#x5168;&#x90E8;&#x66F4;&#x65B0;&#x4E4B;&#x540E;&#x8C03;&#x7528;</p>
+<p>&#x200B;   <code>unbind</code> &#x5143;&#x7D20;&#x89E3;&#x7ED1;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><code>el</code>&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x7ED1;&#x5B9A;&#x7684;DOM&#x5143;&#x7D20;&#x3002;</p>
+<p><code>binding</code>&#xFF1A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5305;&#x542B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code>`name` &#xFF1A; &#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4E0D;&#x5305;&#x542B;`v-`&#x524D;&#x7F00;
+</code></pre><p>&#x200B;   <code>value</code> &#xFF1A;&#x6307;&#x4EE4;&#x7ED1;&#x5B9A;&#x7684;&#x503C;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<code>v-customer=&quot;1+1&quot;</code>,2&#x5C31;&#x662F;&#x7ED1;&#x5B9A;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x200B;   <code>oldValue</code>&#xFF1A;&#x6307;&#x4EE4;&#x7ED1;&#x5B9A;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x53EA;&#x80FD;&#x5728;<code>update</code>&#x548C;<code>componentUpdted</code>&#x4E2D;&#x4F7F;&#x7528;</p>
+<p>&#x200B;   <code>expression</code>&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x6307;&#x4EE4;&#x8868;&#x8FBE;&#x5F0F;&#x3002;<code>v-customer=&quot;1+1&quot;</code>&#xFF0C;&quot;1+1&quot;&#x5C31;&#x662F;&#x8868;&#x8FBE;&#x5F0F;</p>
+<p>&#x200B;   <code>arg</code>&#xFF1A;&#x4F20;&#x9012;&#x7ED9;&#x6307;&#x4EE4;&#x7684;&#x53C2;&#x6570;</p>
+<p>&#x200B;   <code>modifiers</code>&#xFF1A;&#x5305;&#x542B;&#x4FEE;&#x9970;&#x7B26;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;<code>v-customer.prevent=&quot;1+1&quot;</code>&#xFF0C;&#x8FD9;&#x4E2A;modifiers&#x5C31;&#x662F;{prevent:true}</p>
+<p><code>VNode</code>&#xFF1A;Vue&#x751F;&#x6210;&#x7684;&#x865A;&#x62DF;DOM&#x8282;&#x70B9;</p>
+<p><code>oldVnode</code>&#xFF1A;&#x4E0A;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x8282;&#x70B9;&#xFF0C;&#x53EA;&#x80FD;&#x5728;<code>update</code>&#x548C;<code>componentUpdted</code>&#x4E2D;&#x4F7F;&#x7528;</p>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x5168;&#x90E8;&#x53C2;&#x6570;&#x548C;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x7684;Demo&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.directive(&apos;custom&apos;,{
+    bind:function(el,binding,VNode){
+        console.log(&quot;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x7ED1;&#x5B9A;&#x5230;&#x5143;&#x7D20;&#x4E0A;&#x6267;&#x884C;bind&#x94A9;&#x5B50;&#x51FD;&#x6570;&quot;)
+        console.log(&quot;binding &#x5BF9;&#x8C61;&#x5305;&#x542B;{name,value,[oldValue],expression,arg,modifiers})
+    },
+    inserted:function(el,{name,value,[oldValue],expression,arg,modifiers}&#xFF0C;VNode){
+     console.log(&quot;&#x88AB;&#x7ED1;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x5230;&#x7236;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&quot;)
+},
+    update:function(el,{name,value,oldValue,expression,arg,modifiers}&#xFF0C;VNode&#xFF0C;oldVnode){
+     console.log(&quot;&#x7EC4;&#x4EF6;VNode&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&quot;)
+},
+    componentUpdated:function(el,{name,value,oldValue,expression,arg,modifiers}&#xFF0C;VNode&#xFF0C;oldVnode){
+     console.log(&quot;&#x7EC4;&#x4EF6;&#x7684;VNode&#x548C;&#x5176;&#x5B50;VNode&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&quot;)
+}, 
+    unbind:function(el,binding,VNode){
+        console.log(&quot;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#x89E3;&#x7ED1;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&quot;)
+        console.log(&quot;binding &#x5BF9;&#x8C61;&#x5305;&#x542B;{name,value,[oldValue],expression,arg,modifiers})
+    },
+
+})
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-custom:foo.a.b</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> 
+     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;msg&quot;</span>&gt;</span> 
+     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8F93;&#x5165;&#x7684;&#x503C;:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;change(msg)&quot;</span>&gt;</span>&#x6839;&#x636E;&#x8F93;&#x5165;&#x503C;&#x4FEE;&#x6539;&#x6570;&#x636E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> 
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    Vue.directive(<span class="hljs-string">&apos;custom&apos;</span>,{
+        <span class="hljs-comment">//&#x5143;&#x7D20; &#x521D;&#x6B21;&#x7ED1;&#x5B9A; &#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;</span>
+        bind:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el,binding,vnode</span>)</span>{
+           <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x6210;&#x529F;&#x751F;&#x6210;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#xFF1A;v-&quot;</span>+binding.name+<span class="hljs-string">&quot;&#xFF0C;&#x8BE5;&#x6307;&#x4EE4;&#x7ED1;&#x5B9A;&#x5230;&#x4E86;&#x5143;&#x7D20;&#xFF1A;&quot;</span>+el.nodeName); 
+           <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x8BE5;&#x6307;&#x4EE4;&#x88AB;&#x8D4B;&#x4E88;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#xFF1A;&quot;</span>+binding.expression+<span class="hljs-string">&quot;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x662F;&#xFF1A;&quot;</span>+binding.value);       
+        },
+        <span class="hljs-comment">// &#x865A;&#x62DF;&#x8282;&#x70B9;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF1A;&#x6307;&#x4EE4;&#x8868;&#x8FBE;&#x5F0F;&#x503C;&#x6539;&#x53D8;</span>
+        update:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el,binding,vnode,oldVnode</span>)</span>{
+           <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x6307;&#x4EE4;&#x8868;&#x8FBE;&#x5F0F;&#x8D4B;&#x503C;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF1A;&quot;</span>+<span class="hljs-string">&quot;&#x6307;&#x4EE4;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&quot;</span>+binding.expression+<span class="hljs-string">&quot;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#xFF1A;&quot;</span>+binding.value); 
+        }
+    })
+
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({ 
+  el: <span class="hljs-string">&apos;#app&apos;</span>,   
+  data: {
+    message: <span class="hljs-string">&apos;Hello Vue!&apos;</span>,
+      msg:<span class="hljs-literal">undefined</span>
+  },
+    methods:{
+        change:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>)</span>{
+           <span class="hljs-keyword">this</span>.message=msg
+        }           
+     }     
+})
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="vuefilter">Vue.filter</h3>
+<p>&#x6CE8;&#x518C;&#x6216;&#x8005;&#x83B7;&#x53D6;&#x5168;&#x5C40;&#x8FC7;&#x6EE4;&#x5668;&#xFF1A;</p>
+<pre><code class="lang-javascript">Vue.filter(id,[definiction])
+</code></pre>
+<p><code>id</code> &#x662F;&#x8FC7;&#x8FC7;&#x6EE4;&#x5668;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;</p>
+<p><code>[definiction]</code>  &#x7528;&#x6765;&#x5904;&#x7406;&#x9700;&#x8981;&#x8FC7;&#x6EE4;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x51FD;&#x6570;</p>
+<p>&#x8FC7;&#x6EE4;&#x5668;&#x53EF;&#x4EE5;&#x7528;&#x5728;<code>{{}}</code>&#x63D2;&#x503C;&#x548C;<code>v-bind</code>&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5C3E;&#x90E8;&#x901A;&#x8FC7;&#x7BA1;&#x9053;<code>|</code>&#x8868;&#x793A;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- somefilter &#x662F;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668; --&gt;</span>
+/{/{message | somefilter/}/}
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:id</span>=<span class="hljs-string">&quot;name | somefilter&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x6CE8;&#x518C;&#x8FC7;&#x6EE4;&#x5668; value&#x662F;&#x4F20;&#x5165;&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;</span>
+Vue.filter(<span class="hljs-string">&apos;my-filter&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+  <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x5904;&#x7406;&#x540E;&#x7684;&#x503C;</span>
+})
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x8FC7;&#x6EE4;&#x5668;</span>
+<span class="hljs-keyword">var</span> myFilter = Vue.filter(<span class="hljs-string">&apos;my-filter&apos;</span>)
+</code></pre>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8FC7;&#x6EE4;&#x4E00;&#x904D;&#xFF0C;&#x53EA;&#x4FDD;&#x7559;&#x5B57;&#x6BCD;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8BF7;&#x5728;&#x8FD9;&#x91CC;&#x8F93;&#x5165;&#x5185;&#x5BB9;...&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        &#x8FD9;&#x91CC;&#x663E;&#x793A;&#x8FC7;&#x6EE4;&#x4E4B;&#x540E;&#x7684;&#x5185;&#x5BB9;&#xFF1A;/{/{message | keepfigures /}/}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    Vue.filter(<span class="hljs-string">&apos;keepfigures&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>)</span>{
+        value = value.toString();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;value.length;i++){
+            <span class="hljs-keyword">if</span>(value[i])
+        } 
+
+    })  
+
+ <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({ 
+  el: <span class="hljs-string">&apos;#app&apos;</span>,   
+  data: {
+    message: <span class="hljs-string">&apos;Hello Vue!&apos;</span>,
+      msg:<span class="hljs-literal">undefined</span>
+  }   
+})
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -417,7 +534,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"其他API，选项和概念","level":"1.4","depth":1,"previous":{"title":"组件声明","level":"1.3.1","depth":2,"path":"chapter-2/components_declaration.md","ref":"chapter-2/components_declaration.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-3/README.md","mtime":"2019-01-22T14:26:25.313Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-22T14:26:39.278Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"其他API，选项和概念","level":"1.4","depth":1,"previous":{"title":"组件声明","level":"1.3.1","depth":2,"path":"chapter-2/components_declaration.md","ref":"chapter-2/components_declaration.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-3/README.md","mtime":"2019-01-23T09:56:04.694Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-23T09:56:17.039Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

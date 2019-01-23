@@ -25,8 +25,8 @@ var Constructor = Vue.extend({
     template:`<p>{{firstName}}-{{lastName}} aka {{nickName}}</p>` ,
     data():{
     return {
-    	firstName:'Chai',
-    	lastName:'HongJun',
+        firstName:'Chai',
+        lastName:'HongJun',
         nickName:'CHJ'
      }
    }
@@ -71,12 +71,12 @@ Vue.set(target,key,value)
     message: 'Hello!',
     age:99，
       otherInfo:{
-   		marital:'已婚'		   		
+        marital:'已婚'                
    }
   },
     methods:{
            change:function(){
-		 // otherInfo 不是根数据，所以可以配置
+         // otherInfo 不是根数据，所以可以配置
          // 第二个参数要么是数字 要么是字符串 不要使用  app.otherInfo.marital
          // 字符串 正好是属性名称 
          // 数字 则是 数组的下标
@@ -119,12 +119,161 @@ Vue.directive(id,[definition])
 
 `[definition]` 具体的定义项的内容，函数或者一个对象。如果是对象的话可以选择的选项(钩子函数)有：
 
-`bind`  只在元素被第一次绑定到这个指令的时候调用。
+​   `bind`  只在元素被第一次绑定到这个指令的时候调用。
 
-`inserted`  被绑定的元素在插入到父元素的时候调用。
+​   `inserted`  被绑定的元素在插入到父元素的时候调用。
 
-`update` 组件的VNode更新的时候调用。
+​   `update` 组件的VNode更新的时候调用。
 
-`componentUpdated` 组件的VNode和子VNode全部更新之后调用
+​   `componentUpdated` 组件的VNode和子VNode全部更新之后调用
 
-`unbind` 元素解绑的时候调用。
+​   `unbind` 元素解绑的时候调用。
+
+以上钩子函数的参数如下：
+
+`el`，自定义指令绑定的DOM元素。
+
+`binding`：一个对象，包含属性：
+
+    `name` ： 自定义指令的名称，不包含`v-`前缀
+
+​   `value` ：指令绑定的值，比如：`v-customer="1+1"`,2就是绑定的值。
+
+​   `oldValue`：指令绑定的前一个值，只能在`update`和`componentUpdted`中使用
+
+​   `expression`：字符串形式的指令表达式。`v-customer="1+1"`，"1+1"就是表达式
+
+​   `arg`：传递给指令的参数
+
+​   `modifiers`：包含修饰符的对象，比如：`v-customer.prevent="1+1"`，这个modifiers就是{prevent:true}
+
+`VNode`：Vue生成的虚拟DOM节点
+
+`oldVnode`：上一个虚拟节点，只能在`update`和`componentUpdted`中使用
+
+这里有一个包含全部参数和钩子函数的Demo：
+
+```javascript
+Vue.directive('custom',{
+    bind:function(el,binding,VNode){
+        console.log("自定义指令第一次被绑定到元素上执行bind钩子函数")
+        console.log("binding 对象包含{name,value,[oldValue],expression,arg,modifiers})
+    },
+    inserted:function(el,{name,value,[oldValue],expression,arg,modifiers}，VNode){
+     console.log("被绑定的元素插入到父元素的时候调用")
+},
+    update:function(el,{name,value,oldValue,expression,arg,modifiers}，VNode，oldVnode){
+     console.log("组件VNode更新的时候调用")
+},
+    componentUpdated:function(el,{name,value,oldValue,expression,arg,modifiers}，VNode，oldVnode){
+     console.log("组件的VNode和其子VNode更新的时候调用")
+}, 
+    unbind:function(el,binding,VNode){
+        console.log("自定义指令解绑的时候调用")
+        console.log("binding 对象包含{name,value,[oldValue],expression,arg,modifiers})
+    },
+    
+})
+```
+
+一个例子：
+
+```html
+<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
+
+<div id="app">
+    <div v-custom:foo.a.b="message"></div> 
+     <input type="text" v-model="msg"> 
+     <p>输入的值:{{msg}}</p>
+    <button type="button" @click="change(msg)">根据输入值修改数据</button>
+</div> 
+
+<script>
+    Vue.directive('custom',{
+        //元素 初次绑定 自定义指令
+        bind:function(el,binding,vnode){
+           console.log("成功生成自定义指令：v-"+binding.name+"，该指令绑定到了元素："+el.nodeName); 
+           console.log("该指令被赋予的表达式是："+binding.expression+"，表达式的值是："+binding.value);       
+        },
+        // 虚拟节点发生了变化：指令表达式值改变
+        update:function(el,binding,vnode,oldVnode){
+           console.log("指令表达式赋值发生了变化："+"指令表达式："+binding.expression+"表达式的值："+binding.value); 
+        }
+    })
+     
+    var app = new Vue({ 
+  el: '#app',   
+  data: {
+    message: 'Hello Vue!',
+      msg:undefined
+  },
+    methods:{
+        change:function(msg){
+           this.message=msg
+        }           
+     }     
+})
+</script>
+```
+
+### Vue.filter
+
+注册或者获取全局过滤器：
+
+```javascript
+Vue.filter(id,[definiction])
+```
+
+`id` 是过过滤器的名称，字符串形式
+
+`[definiction]`  用来处理需要过滤的内容的函数
+
+过滤器可以用在`{{}}`插值和`v-bind`表达式，并且在表达式的尾部通过管道`|`表示使用：
+
+```html
+<!-- somefilter 是一个过滤器 -->
+/{/{message | somefilter/}/}
+<div :id="name | somefilter"></div>
+```
+
+```javascript
+// 注册过滤器 value是传入的原始数据
+Vue.filter('my-filter', function (value) {
+  // 返回处理后的值
+})
+
+// 获取已注册的过滤器
+var myFilter = Vue.filter('my-filter')
+```
+
+有一个例子，需要将输入的字符串过滤一遍，只保留字母：
+
+```html
+<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
+
+<div id="app">
+   <input type="text" placeholder="请在这里输入内容..." v-model="message">
+    <p>
+        这里显示过滤之后的内容：/{/{message | keepfigures /}/}
+    </p>
+</div>
+
+<script>
+    Vue.filter('keepfigures',function(value){
+        value = value.toString();
+        for(let i=0;i<value.length;i++){
+            if(value[i])
+        } 
+        
+    })  
+    
+ var app = new Vue({ 
+  el: '#app',   
+  data: {
+    message: 'Hello Vue!',
+      msg:undefined
+  }   
+})
+</script>
+```
+
