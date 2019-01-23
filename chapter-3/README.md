@@ -157,7 +157,7 @@ Vue.directive(id,[definition])
 Vue.directive('custom',{
     bind:function(el,binding,VNode){
         console.log("自定义指令第一次被绑定到元素上执行bind钩子函数")
-        console.log("binding 对象包含{name,value,[oldValue],expression,arg,modifiers})
+        console.log("binding 对象包含{name,value,[oldValue],expression,arg,modifiers}")
     },
     inserted:function(el,{name,value,[oldValue],expression,arg,modifiers}，VNode){
      console.log("被绑定的元素插入到父元素的时候调用")
