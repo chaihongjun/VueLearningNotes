@@ -17,6 +17,8 @@ Vue.extend({
 `option` 是参数，可选的是`data`  `template` `methods` `computed` `watch` 等。**`data`必须是函数**
 
 ```html
+<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
+
 <div id="app"></div>
 
 <script>  
@@ -276,4 +278,23 @@ var myFilter = Vue.filter('my-filter')
 })
 </script>
 ```
+
+### mixins
+
+混入`mixins`，类似一个Vue实例的一个“零件”或者是一个“补丁""，这些“零件”具有通用性，当一个Vue实例或者组件在后期维护的时候希望增加一些内容，这些内容在其他组件已经有了实现，所以可以拿来使用，这个时候就很适合使用`mixins`：
+
+```javascript
+var mix = {
+  created: function () { console.log(1) }
+}
+var vm = new Vue({
+  created: function () { console.log(2) },
+  mixins: [mix]
+})
+// 先后输出1和2
+```
+
+`mixins`选项值是一数组
+
+**混入的内容会和被混入的实例内容天然的“混合”在一起。当然，混入进来的钩子函数比调用它的实例优先级高。**
 

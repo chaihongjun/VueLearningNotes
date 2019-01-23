@@ -11,4 +11,7 @@
 * [Vue组件初识](chapter-2/README.md)
     * [组件声明](chapter-2/components_declaration.md)
 * [其他API，选项和概念](chapter-3/README.md)
+* [Vue组件深入](chapter-4/README.md)
+    * [父子组件传值](chapter-4/parent_child.md)
+    * [兄弟组件传值](chapter-4/sblings.md)
 

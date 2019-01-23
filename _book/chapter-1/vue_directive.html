@@ -244,6 +244,51 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5" data-path="../chapter-4/">
+            
+                <a href="../chapter-4/">
+            
+                    
+                    Vue组件深入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter-4/parent_child.html">
+            
+                <a href="../chapter-4/parent_child.html">
+            
+                    
+                    父子组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter-4/sblings.html">
+            
+                <a href="../chapter-4/sblings.html">
+            
+                    
+                    兄弟组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -251,7 +296,7 @@
 
     <li>
         <a href="https://chaihongjun.me" target="blank" class="gitbook-link">
-           Published by Chaihongjun
+            Published by Chaihongjun
         </a>
     </li>
 </ul>
@@ -306,7 +351,7 @@
 <p><a href="#v-once">v-once</a></p>
 <p>&#x4EE5;&#x4E0A;<a href="https://cn.vuejs.org/v2/api/#%E6%8C%87%E4%BB%A4" target="_blank">&#x6307;&#x4EE4;</a>&#x7EC6;&#x5219;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x5B98;&#x7F51;API&#x6587;&#x6863;&#xFF0C;&#x6BCF;&#x4E2A;&#x6307;&#x4EE4;&#x6211;&#x4EEC;&#x4E00;&#x4E00;&#x5206;&#x6790;&#x3002;&#x6307;&#x4EE4;&#x90FD;&#x662F;&#x50CF;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5143;&#x7D20;&#x5C5E;&#x6027;&#x4E00;&#x6837;&#xFF0C;&#x901A;&#x8FC7;&#x6307;&#x4EE4;&#x5F71;&#x54CD;&#x5143;&#x7D20;&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;show&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;info&quot;</span>&gt;</span>
-    {{message}}
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x7684;DIV&#x6709;&#x81EA;&#x5DF2;&#x7684;ID&#x548C;class&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x8D4B;&#x4E88;&#x4E86;&#x4E00;&#x4E2A;Vue&#x6307;&#x4EE4;&#x3002;&#x5F53;&#x7136;&#x8FD9;&#x4E2A;DIV&#x4E00;&#x5B9A;&#x662F;&#x5728;Vue&#x6302;&#x8F7D;&#x70B9;&#x8303;&#x56F4;&#x5185;&#x7684;&#x3002;<strong>&#x6307;&#x4EE4;&#x901A;&#x8FC7;&#x540E;&#x9762;&#x5BF9;&#x5B83;&#x8D4B;&#x4E88;&#x7684;&#x503C;&#x6765;&#x505A;&#x64CD;&#x4F5C;&#x3002;</strong></p>
@@ -316,7 +361,7 @@
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x597D;,<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
@@ -350,7 +395,7 @@
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F7F;&#x7528;&#x63D2;&#x503C;&#x65B9;&#x6CD5;:{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F7F;&#x7528;&#x63D2;&#x503C;&#x65B9;&#x6CD5;:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F7F;&#x7528;v-html&#x6307;&#x4EE4;&#x65B9;&#x6CD5;&#xFF1A;<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-html</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> 
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
 
@@ -378,8 +423,8 @@
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
@@ -408,14 +453,14 @@
 </code></pre>
 <p>&#x66FF;&#x6362;</p>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- v-show &#x662F; true &#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x6B63;&#x5E38;&#x663E;&#x793A;--&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <p>&#x800C;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none;&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:Hello Vue!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <p>&#x66FF;&#x6362;&#x4E86;</p>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- v-show&#x6307;&#x4EE4;&#x662F;false &#x6240;&#x4EE5; &#x5143;&#x7D20;display:none &#x4E5F;&#x5C31;&#x4E0D;&#x663E;&#x793A;&#x4E86; --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <h3 id="v-if-v-else-v-else-if">v-if v-else v-else-if</h3>
 <p>&#x8FD9;&#x4E09;&#x4E2A;&#x6307;&#x4EE4;&#x5728;&#x4E00;&#x8D77;&#x5206;&#x6790;&#xFF0C;&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x89E3;&#x8BFB;&#xFF0C;&#x5B83;&#x4EEC;&#x4F5C;&#x7528;&#x4E8E;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x3002;&#x7C7B;&#x4F3C;JS&#x4E2D;&#x7684;<code>if</code> &#x548C;<code>else</code>&#x8BED;&#x53E5;&#x3002;<strong>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x53EA;&#x6709;<code>v-else</code>&#x6307;&#x4EE4;&#x540E;&#x9762;&#x4E0D;&#x8981;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x3002;</strong></p>
@@ -424,8 +469,8 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
      <span class="hljs-comment">&lt;!-- &#x5355;&#x72EC;&#x4F7F;&#x7528; v-if --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#xFF1A;{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
@@ -545,7 +590,7 @@
 <h3 id="v-for">v-for</h3>
 <p><code>v-for</code>&#x76F8;&#x5F53;&#x4E8E;JS&#x4E2D;&#x7684;<code>for</code>&#x5FAA;&#x73AF;&#xFF0C;&#x591A;&#x6B21;&#x6E32;&#x67D3;&#x3002;&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in items&quot;</span>&gt;</span>
-{{item.properName}}
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span>
 </code></pre>
 <p><code>element</code> &#x662F;&#x5143;&#x7D20;&#x6807;&#x7B7E;&#xFF0C;&#x6BD4;&#x5982;&#x5E38;&#x7528;&#x7684;<code>div</code> <code>li</code>&#xFF0C;<code>v-for</code>&#x4F7F;&#x7528;&#x5728;&#x54EA;&#x4E2A;&#x5143;&#x7D20;&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x5C31;&#x4F1A;&#x591A;&#x6B21;&#x6E32;&#x67D3;&#x3002;  </p>
@@ -553,7 +598,7 @@
 <p>&#x5982;&#x679C;&#x662F;&#x6570;&#x7EC4;&#x5219;&#x5728;&#x5FAA;&#x73AF;&#x7684;&#x65F6;&#x5019;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x5FAA;&#x73AF;&#x8F93;&#x51FA;&#x6570;&#x7EC4;&#x9879;<code>item</code>&#x8FD8;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;&#x7D22;&#x5F15;<code>index</code>&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;(item,index) in items&quot;</span>&gt;</span>
-        {{index}}-{{item}}
+        -
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 </code></pre>
@@ -561,7 +606,7 @@
 <p>&#x5982;&#x679C;&#x662F;&#x60F3;&#x5FAA;&#x73AF;&#x8F93;&#x51FA;&#x5BF9;&#x8C61;<code>object</code>&#x7684;&#x5C5E;&#x6027;<code>key</code>&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x952E;&#x503C;<code>value</code>&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;(value,key,index) in object&quot;</span>&gt;</span>
-        {{index}}-{{key}}-{{value}}
+        --
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 </code></pre>
@@ -582,7 +627,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD4;&#x56DE;num+1&#x7684;&#x503C; --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;num+=1&quot;</span>&gt;</span>&#x52A0;1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    {{num}}
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
@@ -599,7 +644,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- &#x4F7F;&#x7528;&#x65B9;&#x6CD5; --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;andOne&quot;</span>&gt;</span>&#x52A0;1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    {{num}}
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
@@ -797,7 +842,7 @@
 <span class="hljs-comment">&lt;!-- &#x5355;&#x884C;&#x6587;&#x672C; --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;message&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x5185;&#x5BB9;...&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;init value&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Message is: {{ message }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>    
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Message is: <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>    
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
@@ -814,7 +859,7 @@
 <span class="hljs-comment">&lt;!-- &#x591A;&#x884C;&#x6587;&#x672C; --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Multiline message is:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;white-space: pre-line;&quot;</span>&gt;</span>{{ message }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;white-space: pre-line;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;message&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;add multiple lines&quot;</span>&gt;</span>        <span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -832,7 +877,7 @@
 <span class="hljs-comment">&lt;!-- &#x590D;&#x9009;&#x6846; --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checked&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox&quot;</span>&gt;</span>{{ checked }}<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
@@ -855,7 +900,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox2&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;2&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checkes&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox2&quot;</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        &#x9009;&#x4E2D;&#x9879;&#x90FD;&#x662F;: {{checkes}}
+        &#x9009;&#x4E2D;&#x9879;&#x90FD;&#x662F;: 
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -878,7 +923,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox2&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;2&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checkes&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox2&quot;</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        &#x9009;&#x4E2D;&#x9879;&#x90FD;&#x662F;: {{checkes}}
+        &#x9009;&#x4E2D;&#x9879;&#x90FD;&#x662F;: 
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -900,7 +945,7 @@
        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;female&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;&#x5973;&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;sex&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;male&quot;</span>&gt;</span>&#x5973;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        &#x6027;&#x522B;&#x662F;: {{sex}}
+        &#x6027;&#x522B;&#x662F;: 
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -922,7 +967,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>&#x7537;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>&#x5973;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span> 
-   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7684;&#x6027;&#x522B;&#x662F;:{{selected}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>   
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7684;&#x6027;&#x522B;&#x662F;:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>   
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
@@ -943,7 +988,7 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>&#x7537;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>&#x5973;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span> 
-   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7684;&#x6027;&#x522B;&#x662F;:{{selected}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>   
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7684;&#x6027;&#x522B;&#x662F;:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>   
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
@@ -958,7 +1003,7 @@
 <h3 id="v-pre">v-pre</h3>
 <p>&#x76F4;&#x63A5;&#x5199;&#x5728;&#x5143;&#x7D20;&#x6807;&#x7B7E;&#x4E0A;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x7684;HTML&#x6807;&#x7B7E;&#x4E0D;&#x7ECF;&#x8FC7;Vue&#x7684;&#x7F16;&#x8BD1;&#x3002;</p>
 <p>&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x663E;&#x793A;&#x539F;&#x59CB;&#x7684;&#x63D2;&#x503C;&#x6807;&#x7B7E;&#xFF0C;&#x52A0;&#x901F;&#x7F16;&#x8BD1;&#x901F;&#x5EA6;&#xFF1A;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-pre</span>&gt;</span>{{ &#x8FD9;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x7F16;&#x8BD1; }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 </code></pre>
 <p>&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF1A;</p>
 <blockquote>
@@ -973,12 +1018,12 @@
 </code></pre>
 <p>&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x4E0D;&#x663E;&#x793A;&#x63D2;&#x503C;&#x7B26;&#x53F7;&#xFF1A;</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-cloak</span>&gt;</span>
-  {{ message }}
+
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <h3 id="v-once">v-once</h3>
 <p>&#x540C;&#x6837;&#x4E5F;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x7528;&#x5728;&#x5143;&#x7D20;&#x6216;&#x8005;&#x7EC4;&#x4EF6;&#x4E0A;&#xFF0C;&#x53EA;&#x6E32;&#x67D3;&#x4E00;&#x6B21;&#x3002;&#x53EA;&#x8981;&#x4F7F;&#x7528;&#x76EE;&#x7684;&#x662F;&#x4F18;&#x5316;&#x9875;&#x9762;&#x5237;&#x65B0;&#x6027;&#x80FD;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-once</span>&gt;</span>&#x8FD9;&#x4E2A;&#x662F;&#x4E0D;&#x518D;&#x53D8;&#x5316;: {{msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-once</span>&gt;</span>&#x8FD9;&#x4E2A;&#x662F;&#x4E0D;&#x518D;&#x53D8;&#x5316;: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 </code></pre>
 
                                 
@@ -1023,7 +1068,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue指令","level":"1.2.3","depth":2,"next":{"title":"计算属性","level":"1.2.4","depth":2,"path":"chapter-1/computed.md","ref":"chapter-1/computed.md","articles":[]},"previous":{"title":"data选项和插值","level":"1.2.2","depth":2,"path":"chapter-1/data_interpolation.md","ref":"chapter-1/data_interpolation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-1/vue_directive.md","mtime":"2019-01-23T08:32:17.221Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-23T10:04:31.930Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue指令","level":"1.2.3","depth":2,"next":{"title":"计算属性","level":"1.2.4","depth":2,"path":"chapter-1/computed.md","ref":"chapter-1/computed.md","articles":[]},"previous":{"title":"data选项和插值","level":"1.2.2","depth":2,"path":"chapter-1/data_interpolation.md","ref":"chapter-1/data_interpolation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-1/vue_directive.md","mtime":"2019-01-22T11:17:09.728Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-23T14:25:10.437Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

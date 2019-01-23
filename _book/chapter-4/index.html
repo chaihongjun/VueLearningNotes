@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>模板 · Vue学习笔记</title>
+        <title>Vue组件深入 · Vue学习笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter-2/" />
+    <link rel="next" href="parent_child.html" />
     
     
-    <link rel="prev" href="methods.html" />
+    <link rel="prev" href="../chapter-3/" />
     
 
     </head>
@@ -102,9 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../chapter-1/">
             
-                <a href="./">
+                <a href="../chapter-1/">
             
                     
                     vue基础
@@ -116,9 +116,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="start_up.html">
+        <li class="chapter " data-level="1.2.1" data-path="../chapter-1/start_up.html">
             
-                <a href="start_up.html">
+                <a href="../chapter-1/start_up.html">
             
                     
                     起步
@@ -129,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="data_interpolation.html">
+        <li class="chapter " data-level="1.2.2" data-path="../chapter-1/data_interpolation.html">
             
-                <a href="data_interpolation.html">
+                <a href="../chapter-1/data_interpolation.html">
             
                     
                     data选项和插值
@@ -142,9 +142,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="vue_directive.html">
+        <li class="chapter " data-level="1.2.3" data-path="../chapter-1/vue_directive.html">
             
-                <a href="vue_directive.html">
+                <a href="../chapter-1/vue_directive.html">
             
                     
                     vue指令
@@ -155,9 +155,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="computed.html">
+        <li class="chapter " data-level="1.2.4" data-path="../chapter-1/computed.html">
             
-                <a href="computed.html">
+                <a href="../chapter-1/computed.html">
             
                     
                     计算属性
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="methods.html">
+        <li class="chapter " data-level="1.2.5" data-path="../chapter-1/methods.html">
             
-                <a href="methods.html">
+                <a href="../chapter-1/methods.html">
             
                     
                     事件
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="template.html">
+        <li class="chapter " data-level="1.2.6" data-path="../chapter-1/template.html">
             
-                <a href="template.html">
+                <a href="../chapter-1/template.html">
             
                     
                     模板
@@ -244,9 +244,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../chapter-4/">
+        <li class="chapter active" data-level="1.5" data-path="./">
             
-                <a href="../chapter-4/">
+                <a href="./">
             
                     
                     Vue组件深入
@@ -258,9 +258,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../chapter-4/parent_child.html">
+        <li class="chapter " data-level="1.5.1" data-path="parent_child.html">
             
-                <a href="../chapter-4/parent_child.html">
+                <a href="parent_child.html">
             
                     
                     父子组件传值
@@ -271,9 +271,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../chapter-4/sblings.html">
+        <li class="chapter " data-level="1.5.2" data-path="sblings.html">
             
-                <a href="../chapter-4/sblings.html">
+                <a href="sblings.html">
             
                     
                     兄弟组件传值
@@ -319,7 +319,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >模板</a>
+        <a href=".." >Vue组件深入</a>
     </h1>
 </div>
 
@@ -334,10 +334,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6A21;&#x677F;">&#x6A21;&#x677F;</h1>
-<p>&#x524D;&#x9762;&#x5B66;&#x4E60;&#x4E86;&#x5F88;&#x591A;&#x548C;&#x6307;&#x4EE4;&#x53CA;&#x65B9;&#x6CD5;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x8FD9;&#x91CC;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;&#x6A21;&#x677F;&#x6982;&#x5FF5;&#x3002;Vue&#x4E2D;&#x7684;&#x6A21;&#x677F;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x7406;&#x89E3;&#x6210;&#x4F7F;&#x7528;HTML&#x6807;&#x7B7E;&#xFF08;&#x6216;&#x5219;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#x540E;&#x9762;&#x5B66;&#x4E60;&#x5230;&#x5C31;&#x662F;&#x7EC4;&#x4EF6;&#x540D;&#xFF09;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x3002;</p>
-<p>Vue&#x7684;&#x6A21;&#x677F;&#x8BED;&#x6CD5;&#x5141;&#x8BB8;&#x4EE5;&#x58F0;&#x660E;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;DOM&#x548C;Vue&#x7684;&#x5B9E;&#x4F8B;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x8D77;&#x6765;&#x3002;</p>
-<p>&#x524D;&#x9762;&#x5B66;&#x4E60;&#x7684;<code>{{}}</code>&#x63D2;&#x503C;&#x8BED;&#x6CD5;&#x548C;<code>v-*</code>&#x6307;&#x4EE4;&#x90FD;&#x4F5C;&#x7528;&#x4E8E;&#x6A21;&#x677F;&#x4E2D;&#x3002;</p>
+                                <h1 id="vue&#x7EC4;&#x4EF6;&#x6DF1;&#x5165;">Vue&#x7EC4;&#x4EF6;&#x6DF1;&#x5165;</h1>
+<p>&#x5173;&#x4E8E;&#x7EC4;&#x4EF6;&#x524D;&#x5E8F;&#x7AE0;&#x8282;&#x5DF2;&#x7ECF;&#x6709;&#x4E00;&#x4E2A;&#x521D;&#x6B65;&#x7684;&#x8BA4;&#x8BC6;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x9875;&#x9762;&#x5206;&#x6210;N&#x4E2A;&#x90E8;&#x5206;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x6709;&#x9876;&#x90E8;&#x641C;&#x7D22;&#x533A;&#x57DF;&#x548C;&#x5185;&#x5BB9;&#x90E8;&#x5206;&#xFF0C;&#x7136;&#x540E;&#x5185;&#x5BB9;&#x90E8;&#x5206;&#x53C8;&#x5206;&#x6210;&#x4E86;&#x4E09;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x6700;&#x5916;&#x5C42;&#x7684;&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x4E00;&#x4E2A;&#x5927;&#x7684;&#x7EC4;&#x4EF6;&#x3002;&#x8FD9;&#x6837;&#x4E0A;&#x4E0B;&#x548C;&#x6C34;&#x5E73;&#x5404;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x5C31;&#x6709;&#x4E86;&#x5173;&#x7CFB;&#x3002;</p>
+<p><img src="img/componnets.png" alt="&#x7EC4;&#x4EF6;&#x6811;"></p>
+<p>&#x8FD9;&#x7AE0;&#x8282;&#x5C06;&#x4F1A;&#x4ECB;&#x7ECD;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x548C;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x201C;&#x901A;&#x4FE1;&#x201D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4F20;&#x9012;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x4F1A;&#x5B66;&#x4E60;&#x9488;&#x5BF9;&#x7EC4;&#x4EF6;&#x5185;&#x5BB9;&#x90E8;&#x5206;&#x7684;&#x66F4;&#x8FDB;&#x4E00;&#x6B65;&#x4F18;&#x5316;&#x4F7F;&#x7528;&#x7684;&#x63D2;&#x69FD;&#x3002;&#x4EE5;&#x53CA;&#x5173;&#x4E8E;&#x63D0;&#x9AD8;&#x7EC4;&#x4EF6;&#x548C;&#x7EC4;&#x4EF6;&#x5185;&#x5BB9;&#x590D;&#x7528;&#x6027;&#x7684;&#x4F18;&#x5316;&#x3002;&#x8FD8;&#x6709;&#x5173;&#x4E8E;&#x52A8;&#x6001;&#x7EC4;&#x4EF6;&#x7684;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x3002;</p>
 
                                 
                                 </section>
@@ -365,12 +365,12 @@
 
             
                 
-                <a href="methods.html" class="navigation navigation-prev " aria-label="Previous page: 事件">
+                <a href="../chapter-3/" class="navigation navigation-prev " aria-label="Previous page: 其他API，选项和概念">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../chapter-2/" class="navigation navigation-next " aria-label="Next page: Vue组件初识">
+                <a href="parent_child.html" class="navigation navigation-next " aria-label="Next page: 父子组件传值">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -381,7 +381,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"模板","level":"1.2.6","depth":2,"next":{"title":"Vue组件初识","level":"1.3","depth":1,"path":"chapter-2/README.md","ref":"chapter-2/README.md","articles":[{"title":"组件声明","level":"1.3.1","depth":2,"path":"chapter-2/components_declaration.md","ref":"chapter-2/components_declaration.md","articles":[]}]},"previous":{"title":"事件","level":"1.2.5","depth":2,"path":"chapter-1/methods.md","ref":"chapter-1/methods.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-1/template.md","mtime":"2019-01-22T11:17:09.728Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-23T14:25:10.437Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vue组件深入","level":"1.5","depth":1,"next":{"title":"父子组件传值","level":"1.5.1","depth":2,"path":"chapter-4/parent_child.md","ref":"chapter-4/parent_child.md","articles":[]},"previous":{"title":"其他API，选项和概念","level":"1.4","depth":1,"path":"chapter-3/README.md","ref":"chapter-3/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-4/README.md","mtime":"2019-01-23T13:46:20.427Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-23T14:25:10.437Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
