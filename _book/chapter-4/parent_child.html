@@ -466,6 +466,79 @@ Vue.component(<span class="hljs-string">&apos;component-b&apos;</span>,{
 <li><p><code>props</code>&#x63A5;&#x6536;&#x7684;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x968F;&#x7740;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x53D8;&#x5316;&#x800C;&#x53D8;&#x5316;&#xFF0C;&#x5982;&#x679C;&#x63A5;&#x6536;&#x540E;&#x4E0D;&#x60F3;&#x518D;&#x53D7;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x53EF;&#x4EE5;&#x518D;&#x5C06;&#x63A5;&#x6536;&#x7684;&#x6570;&#x636E;&#x8D4B;&#x503C;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;<code>data</code>&#xFF0C;&#x5B8C;&#x6210;&#x672C;&#x5730;&#x6570;&#x636E;&#x521D;&#x59CB;&#x5316;&#x3002; </p>
 </li>
 </ol>
+<h6 id="&#x5B50;&#x7EC4;&#x4EF6;&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x503C;">&#x5B50;&#x7EC4;&#x4EF6;&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x503C;</h6>
+<p>&#x524D;&#x9762;&#x4ECB;&#x7ECD;&#x7684;&#x4F7F;&#x7528;<code>props</code>&#x9009;&#x9879;&#x65B9;&#x6CD5;&#xFF0C;&#x662F;&#x7236;&#x4F20;&#x5B50;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x60F3;&#x5C06;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>$emit</code>&#x65B9;&#x6CD5;&#xFF1A;<strong>&#x7236;&#x7EC4;&#x4EF6;&#x5411;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x4E00;&#x4E2A;Vue&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#xFF0C;&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;<code>$emit</code>&#x89E6;&#x53D1;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x56DE;&#x8C03;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#x3002;</strong></p>
+<pre><code class="lang-vue">&lt;!-- &#x7236;&#x7EC4;&#x4EF6; --&gt;
+&lt;template&gt;
+    &lt;div id=&quot;app&quot;&gt;
+        &lt;p&gt;&lt;/p&gt;
+        &lt;!-- customEventName &#x662F;Vue&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF0C;&#x5C06;&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6; --&gt;
+        &lt;!-- customEventHandler &#x662F;&#x5BF9;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x53E5;&#x67C4; &#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x53E5;&#x67C4;&#x5C5E;&#x4E8E;&#x7236;&#x7EC4;&#x4EF6; --&gt;
+        &lt;Children @customEventName=&quot;customEventHandler&quot;&gt;&lt;/Children&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import Children from &apos;./components/Children.vue&apos;
+export default {
+    name: &apos;app&apos;,
+    data(){
+      return {
+          message:&apos;&#x6211;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&apos;,
+      }
+    },
+    components: {
+        Children
+    },
+    methods:{
+        // customEventHandler &#x7236;&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6;&#x53E5;&#x67C4;&#xFF0C;&#x5C06;&#x4F1A;&#x54CD;&#x5E94;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x800C;&#x6765;&#x7684;&#x6570;&#x636E;
+       //  dataFromChildren &#x8868;&#x793A;&#x4ECE;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;
+       //  &#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x7236;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E9B;&#x5904;&#x7406;
+      customEventHandler(dataFromChildren){
+         alert(dataFromChildren)
+      }
+    }
+}
+&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-vue">&lt;!-- &#x5B50;&#x7EC4;&#x4EF6; --&gt;
+&lt;template&gt;
+      &lt;!-- &#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#x6570;&#x636E; &#x9700;&#x8981;&#x901A;&#x8FC7; &#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6; sendToFather  --&gt;
+    &lt;button type=&quot;button&quot; @click=&quot;sendToFather&quot;&gt;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x7236;&#x7EC4;&#x4EF6;&#x503C;&lt;/button&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+    name: &apos;children&apos;,
+    data() {
+        return {
+            message: &apos;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&apos;
+        }
+    },
+    methods: {
+        sendToFather() {
+            // &#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6;&#x5185;&#x901A;&#x8FC7;$emit&#x901A;&#x77E5;&#x7236;&#x7EC4;&#x4EF6; &#x53BB;&#x54CD;&#x5E94;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6; customEventName
+            // &#x5E76;&#x4E14;&#x4E00;&#x5E76;&#x5E26;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6; &#x6570;&#x636E;
+            this.$emit(&quot;customEventName&quot;, this.message)
+        }
+    }
+}
+&lt;/script&gt;
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x7684;&#x5206;&#x6790;&#x6765;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5B50;&#x7EC4;&#x4EF6;&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x5B50;&#x4F20;&#x7236;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x4ECE;&#x5B50;&#x7EC4;&#x4EF6;&#x5F00;&#x59CB;&#xFF1A;</p>
+<ol>
+<li><p>&#x5B50;&#x7EC4;&#x4EF6;&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x503C;&#xFF0C;&#x9700;&#x8981;&#x501F;&#x52A9;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;<code>methods</code>&#x3002;</p>
+</li>
+<li><p>&#x5B50;&#x7EC4;&#x4EF6;<code>methods</code>&#x67D0;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x901A;&#x8FC7;<code>this.$emit(customEventName,dataFromChildren)</code>&#x7684;&#x65B9;&#x5F0F;&#x901A;&#x77E5;&#x7236;&#x7EC4;&#x4EF6;&#x54CD;&#x5E94;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;<code>customEventName</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x54CD;&#x5E94;&#x662F;&#x6307;&#x5BF9;&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x914D;&#x7F6E;&#x5BF9;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x53E5;&#x67C4;&#xFF0C;&#x5E76;&#x4E14;&#x53D1;&#x9001;&#x5B50;&#x7EC4;&#x4EF6;&#x6570;&#x636E;<code>dataFromChildren</code>&#x3002;</p>
+</li>
+<li><p>&#x56DE;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x89C6;&#x89D2;&#xFF0C;&#x7531;&#x4E8E;&#x9700;&#x8981;&#x7236;&#x7EC4;&#x4EF6;&#x54CD;&#x5E94;&#x524D;&#x9762;&#x5B9A;&#x4E49;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x5185;&#x505A;&#x76D1;&#x542C;&#x52A8;&#x4F5C;&#xFF0C;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;<code>customEventHandler</code>&#x53BB;&#x76D1;&#x542C;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;<code>customEventName</code>&#xFF1A;<code>@customEventName=&quot;customEventHandler&quot;</code>&#x3002;</p>
+</li>
+<li><p>&#x7136;&#x540E;&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;<code>customEventHandler</code>&#x5185;&#xFF0C;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x65B9;&#x5F0F;&#x63A5;&#x6536;&#x6765;&#x81EA;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;<code>dataFromChildren</code>&#xFF0C;&#x6700;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x505A;&#x5904;&#x7406;&#x4E5F;&#x5C31;&#x662F;&#x54CD;&#x5E94;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;:</p>
+<pre><code class="lang-vue">customEventHandler(dataFromChildren){
+         alert(dataFromChildren)
+        // or do other things
+      }
+</code></pre>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -509,7 +582,7 @@ Vue.component(<span class="hljs-string">&apos;component-b&apos;</span>,{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"父子组件传值","level":"1.5.1","depth":2,"next":{"title":"兄弟组件传值","level":"1.5.2","depth":2,"path":"chapter-4/sblings.md","ref":"chapter-4/sblings.md","articles":[]},"previous":{"title":"Vue组件深入","level":"1.5","depth":1,"path":"chapter-4/README.md","ref":"chapter-4/README.md","articles":[{"title":"父子组件传值","level":"1.5.1","depth":2,"path":"chapter-4/parent_child.md","ref":"chapter-4/parent_child.md","articles":[]},{"title":"兄弟组件传值","level":"1.5.2","depth":2,"path":"chapter-4/sblings.md","ref":"chapter-4/sblings.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-4/parent_child.md","mtime":"2019-01-24T03:00:08.290Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-24T03:04:50.235Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"父子组件传值","level":"1.5.1","depth":2,"next":{"title":"兄弟组件传值","level":"1.5.2","depth":2,"path":"chapter-4/sblings.md","ref":"chapter-4/sblings.md","articles":[]},"previous":{"title":"Vue组件深入","level":"1.5","depth":1,"path":"chapter-4/README.md","ref":"chapter-4/README.md","articles":[{"title":"父子组件传值","level":"1.5.1","depth":2,"path":"chapter-4/parent_child.md","ref":"chapter-4/parent_child.md","articles":[]},{"title":"兄弟组件传值","level":"1.5.2","depth":2,"path":"chapter-4/sblings.md","ref":"chapter-4/sblings.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-4/parent_child.md","mtime":"2019-01-25T08:51:12.031Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-25T08:51:50.404Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

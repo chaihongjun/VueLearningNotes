@@ -150,3 +150,87 @@ Vue.component('component-b',{
    ```
 
 4. `props`接收的父组件的数据会随着父组件的变化而变化，如果接收后不想再受父组件的影响，可以再将接收的数据赋值给子组件`data`，完成本地数据初始化。 
+
+###### 子组件向父组件传值
+
+前面介绍的使用`props`选项方法，是父传子的方向，如果是想将子组件的数据传递给父组件，则需要使用`$emit`方法：**父组件向子组件传递一个Vue自定义事件，子组件通过`$emit`触发这个事件，回调给父组件。**
+
+```vue
+<!-- 父组件 -->
+<template>
+    <div id="app">
+        <p>{{message}}</p>
+        <!-- customEventName 是Vue自定义的事件名称，将传递给子组件 -->
+        <!-- customEventHandler 是对应的事件句柄 这个事件句柄属于父组件 -->
+        <Children @customEventName="customEventHandler"></Children>
+    </div>
+</template>
+<script>
+import Children from './components/Children.vue'
+export default {
+    name: 'app',
+    data(){
+      return {
+          message:'我是父组件',
+      }
+    },
+    components: {
+        Children
+    },
+    methods:{
+        // customEventHandler 父组件事件句柄，将会响应子组件传递而来的数据
+       //  dataFromChildren 表示从子组件传递过来的数据
+       //  对于这个数据，父组件可以做一些处理
+      customEventHandler(dataFromChildren){
+         alert(dataFromChildren)
+      }
+    }
+}
+</script>
+
+```
+
+```vue
+<!-- 子组件 -->
+<template>
+      <!-- 子组件传递给父组件数据 需要通过 子组件的一个事件 sendToFather  -->
+    <button type="button" @click="sendToFather">子组件传父组件值</button>
+</template>
+<script>
+export default {
+    name: 'children',
+    data() {
+        return {
+            message: '我是子组件'
+        }
+    },
+    methods: {
+        sendToFather() {
+            // 在子组件事件内通过$emit通知父组件 去响应自定义事件 customEventName
+            // 并且一并带给父组件 数据
+            this.$emit("customEventName", this.message)
+        }
+    }
+}
+</script>
+```
+
+通过以上代码的分析来总结一下子组件向父组件传递数据，因为是子传父，所以，我们从子组件开始：
+
+1. 子组件向父组件传值，需要借助子组件的`methods`。
+
+2. 子组件`methods`某个方法将通过`this.$emit(customEventName,dataFromChildren)`的方式通知父组件响应自定义事件`customEventName`，这个响应是指对这个自定义事件配置对应的事件处理句柄，并且发送子组件数据`dataFromChildren`。
+
+3. 回到父组件视角，由于需要父组件响应前面定义的自定义事件，所以需要在父组件内做监听动作，父组件的方法`customEventHandler`去监听这个事件`customEventName`：`@customEventName="customEventHandler"`。
+
+4. 然后在父组件的方法`customEventHandler`内，通过参数方式接收来自子组件的数据`dataFromChildren`，最后，可以对这个数据做处理也就是响应自定义事件:
+
+   ```vue
+   customEventHandler(dataFromChildren){
+            alert(dataFromChildren)
+   		// or do other things
+         }
+   ```
+
+   
+
