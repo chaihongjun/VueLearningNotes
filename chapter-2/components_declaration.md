@@ -20,7 +20,7 @@ Vue.component('button-counter', {
 Vue.component( id, [definition] )
 ```
 
-`id`是组件的名称，也就是我们说的HTML标签名称，这不过这里是我们自己定义的。
+`id`是组件的名称，也就是我们说的HTML标签名称，这不过这里是我们自己定义的。**组件的名称建议使用`PascalCase`大驼峰或`kebab-case`方式。**
 
 `[definition]`一般是一个匿名对象或者函数，不过一般使用的是匿名对象方式：
 

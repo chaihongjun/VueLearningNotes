@@ -162,7 +162,7 @@ Vue.component('component-b',{
         <p>{{message}}</p>
         <!-- customEventName 是Vue自定义的事件名称，将传递给子组件 -->
         <!-- customEventHandler 是对应的事件句柄 这个事件句柄属于父组件 -->
-        <Children @customEventName="customEventHandler"></Children>
+        <Children @custom-event-name="customEventHandler"></Children>
     </div>
 </template>
 <script>
@@ -208,7 +208,7 @@ export default {
         sendToFather() {
             // 在子组件事件内通过$emit通知父组件 去响应自定义事件 customEventName
             // 并且一并带给父组件 数据
-            this.$emit("customEventName", this.message)
+            this.$emit("custom-event-name", this.message)
         }
     }
 }
@@ -219,9 +219,9 @@ export default {
 
 1. 子组件向父组件传值，需要借助子组件的`methods`。
 
-2. 子组件`methods`某个方法将通过`this.$emit(customEventName,dataFromChildren)`的方式通知父组件响应自定义事件`customEventName`，这个响应是指对这个自定义事件配置对应的事件处理句柄，并且发送子组件数据`dataFromChildren`。
+2. 子组件`methods`某个方法将通过`this.$emit(custom-event-name,dataFromChildren)`的方式通知父组件响应自定义事件`custom-event-name`，这个响应是指对这个自定义事件配置对应的事件处理句柄，并且发送子组件数据`dataFromChildren`。
 
-3. 回到父组件视角，由于需要父组件响应前面定义的自定义事件，所以需要在父组件内做监听动作，父组件的方法`customEventHandler`去监听这个事件`customEventName`：`@customEventName="customEventHandler"`。
+3. 回到父组件视角，由于需要父组件响应前面定义的自定义事件，所以需要在父组件内做监听动作，父组件的方法`customEventHandler`去监听这个事件`custom-event-name`：`@custom-event-name="customEventHandler"`。
 
 4. 然后在父组件的方法`customEventHandler`内，通过参数方式接收来自子组件的数据`dataFromChildren`，最后，可以对这个数据做处理也就是响应自定义事件:
 
@@ -232,5 +232,9 @@ export default {
          }
    ```
 
-   
+   一句话总结就是，子组件在自己的事件内发起`emit`告诉父组件要监听(`v-on`)一个自定义事件,并且这个自定义事件是可以带数据的，父组件在通过自己的方法监听了这个自定义事件之后，在父组件的方法内对传递来的数据做处理（如果有传递数据的话）。
+
+   **有个注意事项： `custom-event-name`推荐使用下划线命名方式。**
+
+   > 参考 : https://cn.vuejs.org/v2/guide/components-custom-events.html#事件名
 
