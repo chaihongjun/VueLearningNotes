@@ -192,6 +192,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.7" data-path="../chapter-1/lifecycle.html">
+            
+                <a href="../chapter-1/lifecycle.html">
+            
+                    
+                    生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -333,6 +346,100 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4F20;&#x503C;">&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4F20;&#x503C;</h1>
+<p>&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x7684;&#x4F20;&#x503C;&#xFF0C;&#x5B9E;&#x9645;&#x5728;&#x5B98;&#x65B9;&#x7684;2.X&#x6587;&#x6863;&#x91CC;&#x9762;&#x6CA1;&#x6709;&#x63D0;&#x53CA;&#x3002;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x662F;&#x7ED3;&#x5408;&#x4E86;&#x7236;&#x5B50;&#x4E92;&#x76F8;&#x4F20;&#x503C;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x7684;<code>EventBus</code>&#xFF0C;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4F20;&#x503C;&#x9700;&#x8981;&#x501F;&#x52A9;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x7684;&#x7236;&#x7EC4;&#x4EF6;&#xFF08;Vue&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF09;&#x3002;</p>
+<p>&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x5176;&#x4E00;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#xFF0C;&#x7236;&#x7EC4;&#x4EF6;&#x63A5;&#x6536;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x4E4B;&#x540E;&#x518D;&#x4F20;&#x9012;&#x7ED9;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p><code>EventBus</code>&#x76D1;&#x542C;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E00;&#x7684;&#x4E8B;&#x4EF6;&#x5E76;&#x63A5;&#x53D7;&#x4F20;&#x503C;&#xFF0C;&#x518D;&#x4E0B;&#x53D1;&#x7ED9;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x521D;&#x59CB;&#x5316;<code>EventBus</code>&#xFF0C;&#x5B9E;&#x9645;&#x5C31;&#x662F;&#x4E00;&#x4E2A;Vue&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-vue">&lt;!-- eventbus.js &#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A; Vue &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A; EventBus--&gt;
+import Vue from &apos;Vue&apos;
+export default = new Vue()
+</code></pre>
+<p>&#x8FD9;&#x4E2A;Vue&#x5B9E;&#x4F8B;&#x6CA1;&#x6709;DOM,&#x7C7B;&#x4F3C;&#x4E00;&#x8F86;Bus&#x7A7F;&#x68AD;&#x4E8E;&#x5404;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x3002;</p>
+<pre><code class="lang-vue">&lt;!-- &#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E00;  --&gt;
+&lt;template&gt;
+    &lt;h3&gt;&#x6211;&#x662F;&#x7EC4;&#x4EF6;one&lt;/h3&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;&#x70B9;&#x51FB;&#x4E0B;&#x9762;&#x6309;&#x94AE;&#x4F20;&#x9001;&#x6570;&#x636E;&#x5230;&#x7EC4;&#x4EF6;two&lt;/p&gt;
+  &lt;button @click=&quot;sendFromOneToTwo&quot;&gt;&#x4F20;&#x503C;&#x5230;&#x7EC4;&#x4EF6;two&lt;/button&gt;
+&lt;/template&gt;
+&lt;script&gt;
+ //&#x5B50;&#x7EC4;&#x4EF6;&#x5F15;&#x5165; eventbus
+import EventBus from &apos;./eventbus&apos;
+export default {
+    name: &apos;ComponentOne&apos;,
+    data(){
+      return {
+          message:&apos;&#x6211;&#x6765;&#x81EA;&#x7EC4;&#x4EF6;one&apos;,
+          local:&apos;&#x7EC4;&#x4EF6;one&#x539F;&#x59CB;&#x6570;&#x636E;&apos;
+      }
+    },
+    methods:{
+        sendFromOneToTwo(){
+            // &#x5411; eventbus &#x53D1;&#x9001;&#x4E8B;&#x4EF6;
+           EventBus.$emit(&quot;custom_event_one&quot;,this.message); 
+        }  
+    }
+}
+&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-vue">&lt;!--&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6; --&gt;
+&lt;template&gt;
+      &lt;h3&gt;&#x6211;&#x662F;&#x7EC4;&#x4EF6;Two&lt;/h3&gt;
+       &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;&#x70B9;&#x51FB;&#x4E0B;&#x9762;&#x6309;&#x94AE;&#x4F20;&#x9001;&#x6570;&#x636E;&#x5230;&#x7EC4;&#x4EF6;one&lt;/p&gt;
+  &lt;button @click=&quot;sendFromTwoToOne&quot;&gt;&#x4F20;&#x503C;&#x5230;&#x7EC4;&#x4EF6;one&lt;/button&gt;
+&lt;/template&gt;
+&lt;script&gt;
+ //&#x5B50;&#x7EC4;&#x4EF6;&#x5F15;&#x5165; eventbus
+import EventBus from &apos;./eventbus&apos;
+export default {
+    name: &apos;ComponentTwo&apos;,
+    data(){
+      return {
+            message:&apos;&#x6211;&#x6765;&#x81EA;&#x7EC4;&#x4EF6;two&apos;,
+            local:&apos;&#x7EC4;&#x4EF6;two&#x539F;&#x59CB;&#x6570;&#x636E;&apos;
+      }
+    },
+    methods:{
+        sendTwo(){
+            // &#x5411; eventbus &#x53D1;&#x9001;&#x4E8B;&#x4EF6;
+           EventBus.$emit(&quot;custom_event_two&quot;,this.message); 
+        }  
+    }
+}
+&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-Vue">&lt;!-- &#x7236;&#x7EC4;&#x4EF6; --&gt;
+&lt;template&gt;
+    &lt;div id=&quot;app&quot;&gt;
+            &lt;p&gt;&lt;/p&gt;
+
+         &lt;component-one&gt;&lt;/component-one&gt;
+
+         &lt;component-two&gt;&lt;/component-two&gt;
+
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import ComponentOne from &apos;./components/ComponentOne.vue&apos;
+import ComponentTwo from &apos;./components/ComponentTwo.vue&apos;
+export default {
+    name: &apos;app&apos;,
+    data(){
+      return {
+          message:&apos;&#x6211;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&apos;,
+      }
+    },
+    components: {
+        ComponentOne,
+        ComponentTwo
+    },
+    methods:{
+
+    }
+}
+&lt;/script&gt;
+</code></pre>
 
                                 
                                 </section>
@@ -372,7 +479,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"兄弟组件传值","level":"1.5.2","depth":2,"previous":{"title":"父子组件传值","level":"1.5.1","depth":2,"path":"chapter-4/parent_child.md","ref":"chapter-4/parent_child.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-4/sblings.md","mtime":"2019-01-25T09:24:38.718Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-25T09:49:56.317Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"兄弟组件传值","level":"1.5.2","depth":2,"previous":{"title":"父子组件传值","level":"1.5.1","depth":2,"path":"chapter-4/parent_child.md","ref":"chapter-4/parent_child.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-4/sblings.md","mtime":"2019-01-26T08:20:22.013Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T09:09:37.098Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

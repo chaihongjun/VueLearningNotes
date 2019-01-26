@@ -8,6 +8,7 @@
     * [计算属性](chapter-1/computed.md)
     * [事件](chapter-1/methods.md)
     * [模板](chapter-1/template.md)
+    * [生命周期](chapter-1/lifecycle.md)
 * [Vue组件初识](chapter-2/README.md)
     * [组件声明](chapter-2/components_declaration.md)
 * [其他API，选项和概念](chapter-3/README.md)
