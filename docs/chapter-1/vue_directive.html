@@ -1,0 +1,1120 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vue指令 · Vue学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Chaihongjun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="computed.html" />
+    
+    
+    <link rel="prev" href="data_interpolation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    vue基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="start_up.html">
+            
+                <a href="start_up.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="data_interpolation.html">
+            
+                <a href="data_interpolation.html">
+            
+                    
+                    data选项和插值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="vue_directive.html">
+            
+                <a href="vue_directive.html">
+            
+                    
+                    vue指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="computed.html">
+            
+                <a href="computed.html">
+            
+                    
+                    计算属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="methods.html">
+            
+                <a href="methods.html">
+            
+                    
+                    事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="template.html">
+            
+                <a href="template.html">
+            
+                    
+                    模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter-2/">
+            
+                <a href="../chapter-2/">
+            
+                    
+                    Vue组件初识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter-2/components_declaration.html">
+            
+                <a href="../chapter-2/components_declaration.html">
+            
+                    
+                    组件声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter-3/">
+            
+                <a href="../chapter-3/">
+            
+                    
+                    其他API，选项和概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter-4/">
+            
+                <a href="../chapter-4/">
+            
+                    
+                    Vue组件深入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter-4/parent_child.html">
+            
+                <a href="../chapter-4/parent_child.html">
+            
+                    
+                    父子组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter-4/sblings.html">
+            
+                <a href="../chapter-4/sblings.html">
+            
+                    
+                    兄弟组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://chaihongjun.me" target="blank" class="gitbook-link">
+           Published by Chaihongjun
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >vue指令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="vue&#x6307;&#x4EE4;">vue&#x6307;&#x4EE4;</h1>
+<p>Vue &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;v&#x5F00;&#x5934;&#x7684;&#x8BED;&#x6CD5;&#x5355;&#x8BCD;&#xFF0C;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x4F7F;&#x7528;Vue&#x6765;&#x64CD;&#x4F5C;&#x9875;&#x9762;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x3002;<code>v-*</code>&#x5F62;&#x5F0F;&#x5C31;&#x662F;Vue&#x63D0;&#x4F9B;&#x7684;&#x6307;&#x4EE4;&#xFF1A;</p>
+<p><a href="#v-text">v-text</a></p>
+<p><a href="#v-html">v-html</a></p>
+<p><a href="#v-show">v-show</a></p>
+<p><a href="#&#x5355;&#x72EC;&#x4F7F;&#x7528;%60v-if%60">v-if</a></p>
+<p><a href="#&#x7ED3;&#x5408;%60v-else%60">v-else</a></p>
+<p><a href="#%60v-if%60%20%60v-else%60%20&#x548C;%60v-else-if%60&#x4E09;&#x4E2A;&#x7EC4;&#x5408;&#x4E00;&#x8D77;&#x4F7F;&#x7528;">v-else-if</a></p>
+<p><a href="#v-for">v-for</a></p>
+<p><a href="#v-on">v-on</a></p>
+<p><a href="#v-bind">v-bind</a></p>
+<p><a href="#v-model">v-model</a></p>
+<p><a href="#v-pre">v-pre</a></p>
+<p><a href="#v-cloak">v-cloak</a></p>
+<p><a href="#v-once">v-once</a></p>
+<p>&#x4EE5;&#x4E0A;<a href="https://cn.vuejs.org/v2/api/#%E6%8C%87%E4%BB%A4" target="_blank">&#x6307;&#x4EE4;</a>&#x7EC6;&#x5219;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x5B98;&#x7F51;API&#x6587;&#x6863;&#xFF0C;&#x6BCF;&#x4E2A;&#x6307;&#x4EE4;&#x6211;&#x4EEC;&#x4E00;&#x4E00;&#x5206;&#x6790;&#x3002;&#x6307;&#x4EE4;&#x90FD;&#x662F;&#x50CF;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5143;&#x7D20;&#x5C5E;&#x6027;&#x4E00;&#x6837;&#xFF0C;&#x901A;&#x8FC7;&#x6307;&#x4EE4;&#x5F71;&#x54CD;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;show&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;info&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;info&quot;</span>&gt;</span>
+    {{message}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;DIV&#x6709;&#x81EA;&#x5DF2;&#x7684;ID&#x548C;class&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x8D4B;&#x4E88;&#x4E86;&#x4E00;&#x4E2A;Vue&#x6307;&#x4EE4;&#x3002;&#x5F53;&#x7136;&#x8FD9;&#x4E2A;DIV&#x4E00;&#x5B9A;&#x662F;&#x5728;Vue&#x6302;&#x8F7D;&#x70B9;&#x8303;&#x56F4;&#x5185;&#x7684;&#x3002;<strong>&#x6307;&#x4EE4;&#x901A;&#x8FC7;&#x540E;&#x9762;&#x5BF9;&#x5B83;&#x8D4B;&#x4E88;&#x7684;&#x503C;&#x6765;&#x505A;&#x64CD;&#x4F5C;&#x3002;</strong></p>
+<h3 id="v-text">v-text</h3>
+<p><code>v-text</code>&#x6307;&#x4EE4;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4ECE;&#x5B57;&#x9762;&#x770B;&#x662F;&#x6587;&#x672C;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x66F4;&#x65B0;&#x7684;&#x662F;&#x5143;&#x7D20;&#x7684;<code>textContent</code>&#xFF0C;&#x5B83;&#x548C;&#x5143;&#x7D20;&#x7684;<code>innerText</code>&#x6709;&#x4E9B;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x533A;&#x522B;&#xFF1A;<code>innerText</code>&#x5C55;&#x73B0;&#x7684;&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x770B;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x800C;&#x4E14;&#x8F93;&#x51FA;&#x5F62;&#x5F0F;&#x4E0A;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x683C;&#x5F0F;&#xFF08;&#x6362;&#x884C;&#xFF0C;&#x591A;&#x4E2A;&#x7A7A;&#x683C;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#xFF09;&#xFF0C;&#x800C;<code>textContent</code>&#x5219;&#x50CF;&#x53BB;&#x9664;&#x4E86;&#x5168;&#x90E8;html&#x6807;&#x7B7E;&#x4E4B;&#x540E;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x4FDD;&#x7559;&#x683C;&#x5F0F;&#x4FE1;&#x606F;&#xFF09;&#x3002;</p>
+<p>&#x6765;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x4F53;&#x4F1A;&#x4E00;&#x4E0B;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x597D;,<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({   
+  el: <span class="hljs-string">&apos;#app&apos;</span>,  
+  data: {
+    message: <span class="hljs-string">&apos;Hello Vue!&apos;</span>
+  }
+})   
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x663E;&#x793A;&#x7684;&#x7ED3;&#x679C;&#x662F;&#xFF1A;</p>
+<blockquote>
+<p>hello Vue!</p>
+<p>hello Vue!</p>
+<p>&#x4F60;&#x597D;,</p>
+<p>hello Vue!</p>
+</blockquote>
+<p>&#x6E90;&#x7801;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hello Vue!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>&#x66FF;&#x6362;&#x4E86;</p>
+<pre><code class="lang-HTML"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-text</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p><a href="http://jsrun.net/JYXKp/edit" target="_blank">&#x5728;&#x7EBF;&#x9884;&#x89C8;&#x5730;&#x5740;</a></p>
+<p>&#x8BF4;&#x660E;<code>textContent</code>&#x4FDD;&#x7559;&#x4E86;<code>p</code>&#x6807;&#x7B7E;&#x7684;&#x6362;&#x884C;&#x4FE1;&#x606F;&#x3002;</p>
+<h3 id="v-html">v-html</h3>
+<p>&#x7C7B;&#x4F3C;&#x524D;&#x9762;&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x662F;&#x5BF9;&#x5143;&#x7D20;&#x7684;<code>innerHTML</code>&#x6709;&#x6548;&#x3002;<code>v-html</code>&#x6307;&#x4EE4;&#x7684;&#x503C;&#x5C06;&#x66FF;&#x6362;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F7F;&#x7528;&#x63D2;&#x503C;&#x65B9;&#x6CD5;:{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F7F;&#x7528;v-html&#x6307;&#x4EE4;&#x65B9;&#x6CD5;&#xFF1A;<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-html</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> 
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({   
+  el: <span class="hljs-string">&apos;#app&apos;</span>,  
+  data: {
+    message: <span class="hljs-string">&apos;&lt;span style=&quot;color:green;&quot;&gt;Hello Vue!&lt;/span&gt;&apos;</span>
+  }
+})   
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x663E;&#x793A;&#x7ED3;&#x679C;:</p>
+<p><img src="img/v-html.png" alt="v-html&#x6307;&#x4EE4;"></p>
+<p>&#x6E90;&#x7801;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:green;&quot;</span>&gt;</span>Hello Vue!<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+<p>&#x66FF;&#x6362;&#x4E86;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-html</span>=<span class="hljs-string">&quot;message&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>&#x5448;&#x73B0;&#x9875;&#x9762;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x4ECE;&#x6548;&#x679C;&#x6765;&#x8BF4;&#xFF0C;message&#x503C;&#x7684;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B83;&#x6700;&#x7EC8;&#x53D8;&#x6210;HTML&#x88AB;&#x6D4F;&#x89C8;&#x5668;&#x89E3;&#x6790;&#xFF0C;&#x56E0;&#x800C;&#x6539;&#x53D8;&#x4E86;&#x9875;&#x9762;DOM&#x7ED3;&#x6784;&#x3002;&#x5B98;&#x7F51;API&#x6587;&#x6863;&#x63D0;&#x793A;&#xFF1A;&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x5728;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x7684;&#x5185;&#x5BB9;&#x4E0A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#xFF0C;&#x56E0;&#x4E3A;&#x5BB9;&#x6613;&#x9020;&#x6210;XSS&#x653B;&#x51FB;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x65E5;&#x5E38;&#x60C5;&#x51B5;&#x8FD8;&#x662F;&#x5C3D;&#x91CF;&#x5C11;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x3002;</p>
+<h3 id="v-show">v-show</h3>
+<p>&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x662F;&#x7528;&#x6765;&#x63A7;&#x5236;&#x5143;&#x7D20;&#x7684;<code>display</code>&#x5C5E;&#x6027;&#x7684;&#xFF0C;&#x5F53;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x88AB;&#x8D4B;&#x4E88;&#x201C;&#x771F;&#x503C;&#x201D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8868;&#x793A;&#x5143;&#x7D20;<code>display:block</code>&#xFF0C;&#x5F53;&#x662F;&quot;&#x5047;&#x503C;&quot;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5143;&#x7D20;<code>display:none</code>&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({   
+  el: <span class="hljs-string">&apos;#app&apos;</span>,  
+  data: {
+     show:<span class="hljs-literal">true</span>,
+     hidden:<span class="hljs-literal">false</span>,
+     message: <span class="hljs-string">&apos;Hello Vue!&apos;</span>
+  }
+})   
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x663E;&#x793A;&#xFF1A;</p>
+<blockquote>
+<p>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;Hello Vue!</p>
+</blockquote>
+<p>&#x6E90;&#x7801;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;Hello Vue!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none;&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:Hello Vue!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x4E5F;&#x5C31;&#x662F;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;Hello Vue!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>&#x66FF;&#x6362;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- v-show &#x662F; true &#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x6B63;&#x5E38;&#x663E;&#x793A;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>&#x800C;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display: none;&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:Hello Vue!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>&#x66FF;&#x6362;&#x4E86;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- v-show&#x6307;&#x4EE4;&#x662F;false &#x6240;&#x4EE5; &#x5143;&#x7D20;display:none &#x4E5F;&#x5C31;&#x4E0D;&#x663E;&#x793A;&#x4E86; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x663E;&#x793A;:{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<h3 id="v-if-v-else-v-else-if">v-if v-else v-else-if</h3>
+<p>&#x8FD9;&#x4E09;&#x4E2A;&#x6307;&#x4EE4;&#x5728;&#x4E00;&#x8D77;&#x5206;&#x6790;&#xFF0C;&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x89E3;&#x8BFB;&#xFF0C;&#x5B83;&#x4EEC;&#x4F5C;&#x7528;&#x4E8E;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x3002;&#x7C7B;&#x4F3C;JS&#x4E2D;&#x7684;<code>if</code> &#x548C;<code>else</code>&#x8BED;&#x53E5;&#x3002;<strong>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x53EA;&#x6709;<code>v-else</code>&#x6307;&#x4EE4;&#x540E;&#x9762;&#x4E0D;&#x8981;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x3002;</strong></p>
+<h6 id="&#x5355;&#x72EC;&#x4F7F;&#x7528;v-if">&#x5355;&#x72EC;&#x4F7F;&#x7528;<code>v-if</code></h6>
+<pre><code class="lang-HTML"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- &#x5355;&#x72EC;&#x4F7F;&#x7528; v-if --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span>&#x6211;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#xFF1A;{{message}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({   
+  el: <span class="hljs-string">&apos;#app&apos;</span>,  
+  data: {
+     show:<span class="hljs-literal">true</span>,
+     hidden:<span class="hljs-literal">false</span>,
+     message: <span class="hljs-string">&apos;Hello Vue!&apos;</span>
+  }
+})   
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x663E;&#x793A;&#x7ED3;&#x679C;:</p>
+<blockquote>
+<p>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;Hello Vue!</p>
+</blockquote>
+<p>&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x6211;&#x4F1A;&#x663E;&#x793A;&#xFF1A;Hello Vue!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> 
+    <span class="hljs-comment">&lt;!----&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x53D1;&#x73B0;&#x6CA1;&#x6709;&#xFF0C;<code>v-if</code>&#x548C;<code>v-show</code>&#x662F;&#x591A;&#x4E48;&#x76F8;&#x4F3C;&#xFF0C;&#x5728;&#x9875;&#x9762;&#x7684;&#x5C55;&#x73B0;&#x6548;&#x679C;&#x4E0A;&#x5982;&#x51FA;&#x4E00;&#x8F99;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x65E2;&#x7136;&#x662F;&#x4E24;&#x4E2A;&#x6307;&#x4EE4;&#xFF0C;&#x80AF;&#x5B9A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#x3002;&#x5206;&#x6790;&#x89E3;&#x6790;&#x4E4B;&#x540E;&#x7684;&#x6E90;&#x7801;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF1A;<code>v-show</code>&#x5982;&#x679C;&#x53D6;&#x503C;&#x4E3A;&#x201C;&#x5047;&#x201D;&#xFF0C;&#x5219;&#x5143;&#x7D20;&#x4E0D;&#x663E;&#x793A;&#xFF0C;&#x4F46;&#x662F;&#x88AB;&#x6DFB;&#x52A0;&#x4E86;<code>display:none</code>&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4F9D;&#x7136;&#x5728;DOM&#x91CC;&#x9762;&#x3002;&#x800C;<code>v-if</code>&#x5982;&#x679C;&#x53D6;&#x503C;&#x662F;&#x201C;&#x5047;&#x201D;&#xFF0C;&#x5219;&#x5728;DOM&#x91CC;&#x9762;&#x90FD;&#x770B;&#x4E0D;&#x5230;&#x3002;&#x4E0A;&#x4F8B;&#x4E2D;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6CE8;&#x91CA;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x7ED3;&#x8BBA;&#x663E;&#x800C;&#x6613;&#x89C1;&#x3002;<strong><code>v-if</code>&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x5143;&#x7D20;&#x5728;DOM&#x4E2D;&#x662F;&#x5426;&#x521B;&#x5EFA;&#xFF0C;&#x800C;<code>v-show</code>&#x53EA;&#x662F;&#x5728;CSS&#x5C42;&#x9762;&#x63A7;&#x5236;&#x5143;&#x7D20;&#x662F;&#x5426;&#x663E;&#x793A;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x9891;&#x7E41;&#x5207;&#x6362;&#x5143;&#x7D20;&#x7684;&#x663E;&#x793A;&#x72B6;&#x6001;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;<code>v-show</code>&#x662F;&#x66F4;&#x597D;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x6027;&#x80FD;&#x66F4;&#x597D;&#x3002;</strong></p>
+<h6 id="&#x7ED3;&#x5408;v-else">&#x7ED3;&#x5408;<code>v-else</code></h6>
+<p>&#x524D;&#x9762;&#x662F;&#x5355;&#x72EC;&#x4F7F;&#x7528;<code>v-if</code>&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x7ED3;&#x5408;<code>v-else</code>&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7CBE;&#x901A;Vue&#x5417;&#xFF1F;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+     <span class="hljs-comment">&lt;!--  v-if --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;yes&quot;</span>&gt;</span>&#x662F;&#x7684;&#xFF0C;&#x6211;&#x5F88;&#x7CBE;&#x901A;&#x5B83;&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- v-else --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-else</span>&gt;</span>&#x6CA1;&#x6709;&#xFF0C;&#x6211;&#x8FD8;&#x6CA1;&#x5165;&#x95E8;&#x5462;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({   
+  el: <span class="hljs-string">&apos;#app&apos;</span>,  
+  data: {
+     yes:<span class="hljs-literal">false</span>,
+  }
+})   
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF1A;</p>
+<blockquote>
+<p>&#x4F60;&#x7CBE;&#x901A;Vue&#x5417;&#xFF1F;</p>
+<p>&#x6CA1;&#x6709;&#xFF0C;&#x6211;&#x8FD8;&#x6CA1;&#x5165;&#x95E8;&#x5462;&#x3002;</p>
+</blockquote>
+<p>&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7CBE;&#x901A;Vue&#x5417;&#xFF1F;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x6CA1;&#x6709;&#xFF0C;&#x6211;&#x8FD8;&#x6CA1;&#x5165;&#x95E8;&#x5462;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x524D;&#x9762;&#x7684;&#x4EE3;&#x7801;<code>v-if</code>&#x7684;&#x53D6;&#x503C;&#x4E3A;&#x201C;&#x5047;&#x201D;&#xFF0C;&#x6240;&#x4EE5;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x8FDB;&#x5165;&#x4E86;<code>v-else</code>&#x90A3;&#x4E00;&#x6761;&#x8DEF;&#x3002;<strong>&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#xFF0C;<code>v-else</code>&#x5FC5;&#x987B;&#x7D27;&#x7D27;&#x8DDF;&#x968F;&#x5728;<code>v-if</code>&#x540E;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x4EEC;&#x88AB;&#x5206;&#x5F00;&#x4E86;&#xFF0C;&#x5219;&#x4F1A;&#x8D77;&#x4E0D;&#x5230;&#x4F60;&#x9884;&#x60F3;&#x7684;&#x6548;&#x679C;</strong>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7CBE;&#x901A;Vue&#x5417;&#xFF1F;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+     <span class="hljs-comment">&lt;!--  v-if --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;yes&quot;</span>&gt;</span>&#x662F;&#x7684;&#xFF0C;&#x6211;&#x5F88;&#x7CBE;&#x901A;&#x5B83;&#xFF01;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x6211;&#x662F;&#x5206;&#x5272;&#x7EBF;&#xFF0C;&#x8BA9;v-if&#x548C;v-else&#x5206;&#x5F00;&#x4E86;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- v-else --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-else</span>&gt;</span>&#x6CA1;&#x6709;&#xFF0C;&#x6211;&#x8FD8;&#x6CA1;&#x5165;&#x95E8;&#x5462;&#x3002;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({   
+  el: <span class="hljs-string">&apos;#app&apos;</span>,  
+  data: {
+     yes:<span class="hljs-literal">false</span>,
+  }
+})   
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF1A;</p>
+<blockquote>
+<p>&#x4F60;&#x7CBE;&#x901A;Vue&#x5417;&#xFF1F;</p>
+<p>&#x6211;&#x662F;&#x5206;&#x5272;&#x7EBF;&#xFF0C;&#x8BA9;v-if&#x548C;v-else&#x5206;&#x5F00;&#x4E86;&#x3002;</p>
+</blockquote>
+<p>&#x6574;&#x4E2A;&#x5224;&#x65AD;&#x6D41;&#x7A0B;&#x88AB;&#x7834;&#x574F;&#x4E86;&#xFF0C;&#x800C;&#x4E14;&#x63A7;&#x5236;&#x53F0;&#x4E5F;&#x62A5;&#x9519;:</p>
+<blockquote>
+<p>v-else used on element &lt;span&gt;without corresponding v-if.</p>
+</blockquote>
+<h6 id="v-if-v-else-&#x548C;v-else-if&#x4E09;&#x4E2A;&#x7EC4;&#x5408;&#x4E00;&#x8D77;&#x4F7F;&#x7528;"><code>v-if</code> <code>v-else</code> &#x548C;<code>v-else-if</code>&#x4E09;&#x4E2A;&#x7EC4;&#x5408;&#x4E00;&#x8D77;&#x4F7F;&#x7528;</h6>
+<p>&#x4E09;&#x4E2A;&#x6307;&#x4EE4;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;JS&#x4E2D;&#x7684;switch&#x591A;&#x6761;&#x4EF6;&#x7684;&#x5224;&#x65AD;&#x8BED;&#x53E5;&#x3002;&#x5F53;&#x9700;&#x8981;&#x5224;&#x65AD;&#x7684;&#x6761;&#x4EF6;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x65F6;&#x5019;,&#x901A;&#x5E38;&#x662F;&#x9700;&#x8981;3&#x4E2A;&#x548C;3&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x4E0D;&#x540C;&#x72B6;&#x6001;&#xFF0C;&#x4E09;&#x4E2A;&#x7EC4;&#x5408;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#xFF0C;&#x53E6;&#x5916;&#xFF0C;&#x524D;&#x9762;&#x5173;&#x4E8E;<code>v-if</code>&#x548C;<code>v-else</code>&#x5FC5;&#x987B;&#x201C;&#x4EB2;&#x5BC6;&#x63A5;&#x89E6;&#x201D;&#x7684;&#x539F;&#x5219;&#x5728;&#x8FD9;&#x4E09;&#x8005;&#x4E4B;&#x95F4;&#x540C;&#x6837;&#x9002;&#x7528;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x51E0;&#xFF1F;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;today==1&quot;</span>&gt;</span>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x4E00;&#xFF0C;&#x4E0A;&#x73ED;ing<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">&quot;today==2&quot;</span>&gt;</span>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x4E8C;&#xFF0C;&#x4E0A;&#x73ED;ing<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">&quot;today==3&quot;</span>&gt;</span>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x4E09;&#xFF0C;&#x4E0A;&#x73ED;ing<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">&quot;today==4&quot;</span>&gt;</span>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x56DB;&#xFF0C;&#x4E0A;&#x73ED;ing<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">&quot;today==5&quot;</span>&gt;</span>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x4E94;&#xFF0C;&#x4E0A;&#x73ED;ing<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-else-if</span>=<span class="hljs-string">&quot;today==6&quot;</span>&gt;</span>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x516D;&#xFF0C;&#x8FD8;&#x5728;&#x4E0A;&#x73ED;ing<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-else</span>&gt;</span>&#x4ECA;&#x5929;&#x661F;&#x671F;&#x5929;&#xFF0C;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x4F11;&#x606F;&#x4E86;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app = <span class="hljs-keyword">new</span> Vue({   
+  el: <span class="hljs-string">&apos;#app&apos;</span>,  
+  data: {
+    today:<span class="hljs-number">6</span>
+  }
+})   
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF1A;</p>
+<blockquote>
+<p>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x51E0;&#xFF1F;</p>
+<p>&#x4ECA;&#x5929;&#x662F;&#x5468;&#x516D;&#xFF0C;&#x8FD8;&#x5728;&#x4E0A;&#x73ED;ing</p>
+</blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF0C;&#x5224;&#x65AD;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;&#x76F8;&#x7B49;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;<code>=</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x8D4B;&#x503C;&#x7B26;&#x53F7;</strong></p>
+<h3 id="v-for">v-for</h3>
+<p><code>v-for</code>&#x76F8;&#x5F53;&#x4E8E;JS&#x4E2D;&#x7684;<code>for</code>&#x5FAA;&#x73AF;&#xFF0C;&#x591A;&#x6B21;&#x6E32;&#x67D3;&#x3002;&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in items&quot;</span>&gt;</span>
+{{item.properName}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span>
+</code></pre>
+<p><code>element</code> &#x662F;&#x5143;&#x7D20;&#x6807;&#x7B7E;&#xFF0C;&#x6BD4;&#x5982;&#x5E38;&#x7528;&#x7684;<code>div</code> <code>li</code>&#xFF0C;<code>v-for</code>&#x4F7F;&#x7528;&#x5728;&#x54EA;&#x4E2A;&#x5143;&#x7D20;&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x5C31;&#x4F1A;&#x591A;&#x6B21;&#x6E32;&#x67D3;&#x3002;  </p>
+<p><code>item in items</code> &#x6EE1;&#x8DB3;&#x7684;&#x662F;&#x7279;&#x5B9A;&#x7684;<code>alias in expression</code>&#x8BED;&#x6CD5;&#xFF0C;<code>alias</code>&#x662F;&#x5F53;&#x524D;&#x904D;&#x5386;&#x5143;&#x7D20;&#x7684;&#x522B;&#x540D;&#xFF0C;<code>expression</code>&#x662F;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x6570;&#x7EC4;&#x5219;&#x5728;&#x5FAA;&#x73AF;&#x7684;&#x65F6;&#x5019;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x5FAA;&#x73AF;&#x8F93;&#x51FA;&#x6570;&#x7EC4;&#x9879;<code>item</code>&#x8FD8;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;&#x7D22;&#x5F15;<code>index</code>&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;(item,index) in items&quot;</span>&gt;</span>
+        {{index}}-{{item}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p><code>index</code>&#x53D6;&#x503C;&#x4ECE;0&#x5F00;&#x59CB;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x60F3;&#x5FAA;&#x73AF;&#x8F93;&#x51FA;&#x5BF9;&#x8C61;<code>object</code>&#x7684;&#x5C5E;&#x6027;<code>key</code>&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x952E;&#x503C;<code>value</code>&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;(value,key,index) in object&quot;</span>&gt;</span>
+        {{index}}-{{key}}-{{value}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p>&#x5BF9;&#x8C61;&#x7684;&#x8F93;&#x51FA;&#x4E5F;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x7D22;&#x5F15;&#x503C;,&#x8868;&#x793A;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x53F7;&#xFF1A;</p>
+<pre><code class="lang-js">{name:<span class="hljs-string">&apos;chj&apos;</span>,sex:<span class="hljs-string">&apos;male&apos;</span>,age:<span class="hljs-number">10</span>}
+</code></pre>
+<p>&#x6BD4;&#x5982;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;<code>index</code>&#x4E3A;2&#x7684;&#x662F;&#x201C;sex:&apos;male&apos;&#x201D; &#x8FD9;&#x4E00;&#x952E;&#x503C;&#x5BF9;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;<code>v-for</code>&#x5FAA;&#x73AF;&#x8BED;&#x6CD5;&#x90E8;&#x5206;&#x7684;&#x53C2;&#x6570;&#x58F0;&#x660E;&#x987A;&#x5E8F;,&#x9488;&#x5BF9;&#x6570;&#x7EC4;&#xFF0C;&#x53C2;&#x6570;&#x987A;&#x5E8F;&#x5FC5;&#x987B;&#x662F;(item,index)&#xFF0C;&#x9488;&#x5BF9;&#x5BF9;&#x8C61;&#x987A;&#x5E8F;&#x5FC5;&#x987B;&#x662F;(value,key,index)&#xFF0C;&#x5982;&#x679C;&#x6709;&#x53C2;&#x6570;&#x4E0D;&#x9700;&#x8981;&#x5219;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x3002;</p>
+<h3 id="v-on">v-on</h3>
+<p>&#x7528;&#x6765;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#xFF0C;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;jQuery&#x7684;on&#x65B9;&#x6CD5;&#x3002;&#x5B83;&#x7684;&#x7F29;&#x5199;&#x65B9;&#x5F0F;&#x662F;<code>@</code></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">element</span> <span class="hljs-attr">v-on:eventName</span>=<span class="hljs-string">&quot;dosomething&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x7F29;&#x5199; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">element</span> @<span class="hljs-attr">eventName</span>=<span class="hljs-string">&quot;dosomething&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span>
+</code></pre>
+<p><code>eventName</code>&#x662F;&#x5177;&#x4F53;&#x7684;&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#xFF0C;&#x6BD4;&#x5982;<code>click</code>&#xFF0C;<code>dblclick</code>&#x7B49;&#x3002;&#x800C;<code>dosomething</code>&#x5219;&#x662F;&#x4E8B;&#x4EF6;&#x6267;&#x884C;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x4E2A;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x662F;<code>methods</code>&#x9009;&#x9879;&#x91CC;&#x9762;&#x58F0;&#x660E;&#x5B9A;&#x4E49;&#x7684;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD4;&#x56DE;num+1&#x7684;&#x503C; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;num+=1&quot;</span>&gt;</span>&#x52A0;1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    {{num}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            num:<span class="hljs-number">1</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x4F7F;&#x7528;&#x65B9;&#x6CD5; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;andOne&quot;</span>&gt;</span>&#x52A0;1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    {{num}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            num:<span class="hljs-number">1</span>
+        },
+        <span class="hljs-comment">// methods &#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x4E86;andOne&#x65B9;&#x6CD5;</span>
+        methods:{
+            andOne:<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.num+=<span class="hljs-number">1</span>;
+            },
+                anotherOne:<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+                     <span class="hljs-comment">// dosomething;</span>
+                }   
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x5173;&#x4E8E;<code>methods</code>  &#x540E;&#x7EED;&#x5C06;&#x518D;&#x7ED3;&#x5408;<code>v-on</code>&#x5206;&#x6790;&#x3002;</p>
+<h3 id="v-bind">v-bind</h3>
+<p><code>v-bind</code>&#x662F;&#x7528;&#x6765;&#x7ED1;&#x5B9A;&#x5C5E;&#x6027;&#x548C;&#x5C5E;&#x6027;&#x503C;&#x7684;&#xFF0C;&#x7F29;&#x5199;&#x65B9;&#x5F0F;&#x662F;&#x53EA;&#x8981;&#x4E00;&#x4E2A;&#x5192;&#x53F7;<code>:</code>&#x3002;</p>
+<p>&#x5728;&#x65E5;&#x5E38;&#x4F7F;&#x7528;HTML&#x4E2D;&#xFF0C;&#x5143;&#x7D20;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x4E00;&#x822C;&#x662F;<code>class</code>&#xFF0C;<code>style</code>&#xFF0C;<code>id</code>&#x7B49;&#x5C5E;&#x6027;&#x3002;<code>v-bind</code>&#x7684;&#x5B58;&#x5728;&#x8BA9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;HTML&#x5143;&#x7D20;<code>class</code>&#x548C;<code>style</code>&#x5C5E;&#x6027;&#x7ED1;&#x5B9A;&#x3002;&#x4F7F;&#x7528;<code>v-bind</code>&#x65E0;&#x8BBA;&#x662F;&#x7ED1;&#x5B9A;<code>class</code>&#x8FD8;&#x662F;<code>style</code>&#x90FD;&#x4EC5;&#x9650;&#x4E8E;<strong>&#x5BF9;&#x8C61;&#x548C;&#x6570;&#x7EC4;</strong>&#x8BED;&#x6CD5;&#x3002;</p>
+<h4 id="&#x7ED1;&#x5B9A;-html-class">&#x7ED1;&#x5B9A; HTML Class</h4>
+<h6 id="&#x7ED1;&#x5B9A;&#x5BF9;&#x8C61;&#x8BED;&#x6CD5;">&#x7ED1;&#x5B9A;&#x5BF9;&#x8C61;&#x8BED;&#x6CD5;</h6>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">&quot;{className1:booleanVarValue1,&apos;className2&apos;:booleanVarValue2,...}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><code>className</code>&#x662F;CSS Class&#x7684;&#x540D;&#x79F0;&#xFF0C;<code>booleanVarValue</code>&#x662F;&#x5E03;&#x5C14;&#x503C;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-HTML"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.active</span>{
+        <span class="hljs-attribute">border-color</span>:red;
+    }
+    <span class="hljs-selector-class">.text-danger</span>{
+        <span class="hljs-attribute">color</span>:yellow;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- &#x7ED1;&#x5B9A;&#x7684;&#x5BF9;&#x8C61; &#x5C5E;&#x6027;&#x540D;&#x79F0;&#x662F; html class &#x540D;&#x5B57;&#x90E8;&#x5206; --&gt;</span>
+      <span class="hljs-comment">&lt;!-- &#x5C5E;&#x6027;&#x503C; &#x90E8;&#x5206;&#x662F; &#x5E03;&#x5C14;&#x503C;&#x53D8;&#x91CF;--&gt;</span>    
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">&quot;{active:isActive,&apos;text-danger&apos;: hasError}&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            <span class="hljs-comment">//&#x6570;&#x636E;&#x7684;&#x952E;&#x90E8;&#x5206;&#x662F;&#x5E03;&#x5C14;&#x503C;&#x53D8;&#x91CF;</span>
+            isActive:<span class="hljs-literal">true</span>,
+            hasError:<span class="hljs-literal">false</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x5E03;&#x5C14;&#x503C;&#x7684;&#x8FD0;&#x7B97;&#x89C4;&#x5219;&#xFF0C;&#x6E32;&#x67D3;&#x7684;HTML&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;active&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x518D;&#x7ED3;&#x5408;CSS&#x58F0;&#x660E;&#xFF0C;&#x6700;&#x7EC8;&#x663E;&#x793A;&#x6B63;&#x786E;&#x7684;&#x7ED3;&#x679C;&#xFF0C;DIV&#x7684;&#x8FB9;&#x6846;&#x5448;&#x73B0;&#x7EA2;&#x8272;&#x3002;</p>
+<p><strong>&#x7ED1;&#x5B9A;HTML CLASS&#x53EF;&#x4EE5;&#x4EE5;&#x591A;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#x5F62;&#x5F0F;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x53D8;&#x91CF;&#x7684;&quot;&#x771F;&#x503C;&quot;&#x6216;&#x8005;&#x201C;&#x5047;&#x503C;&#x201D;&#x8FBE;&#x5230;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x67D0;&#x4E2A;Class</strong></p>
+<h6 id="&#x7ED1;&#x5B9A;&#x6570;&#x7EC4;&#x8BED;&#x6CD5;">&#x7ED1;&#x5B9A;&#x6570;&#x7EC4;&#x8BED;&#x6CD5;</h6>
+<pre><code class="lang-HTML"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">&quot;[classVarName1,classVarName2:,...]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><code>classVarName</code>&#x53D8;&#x91CF;&#x540D;&#xFF0C;&#x5B58;&#x50A8;CSS Class&#x540D; &#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.active</span>{
+        <span class="hljs-attribute">border-color</span>:red;
+    }
+    <span class="hljs-selector-class">.text-danger</span>{
+        <span class="hljs-attribute">color</span>:yellow;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+       <span class="hljs-comment">&lt;!-- &#x7ED1;&#x5B9A;&#x7684;&#x6570;&#x7EC4; &#x6570;&#x7EC4;&#x5143;&#x7D20;&#x662F;&#x53D8;&#x91CF; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">&quot;[isactive,hasError]&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            <span class="hljs-comment">// &#x952E;&#x503C;&#x90FD;&#x662F;Class &#x540D;&#x79F0;</span>
+            isActive:<span class="hljs-string">&apos;active&apos;</span>,
+            hasError:<span class="hljs-string">&apos;text-danger&apos;</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x6E32;&#x67D3;HTML&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+       <span class="hljs-comment">&lt;!-- &#x7ED1;&#x5B9A;&#x7684;&#x6570;&#x7EC4; &#x6570;&#x7EC4;&#x5143;&#x7D20;&#x662F;&#x53D8;&#x91CF; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-bind:class</span>=<span class="hljs-string">&quot;active text-danger&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><strong>&#x7ED1;&#x5B9A;CSS Style&#x53EF;&#x4EE5;&#x4EE5;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x5F62;&#x5F0F;&#xFF0C;&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7528;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8868;&#x793A;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;CSS Class</strong></p>
+<h4 id="&#x7ED1;&#x5B9A;html-style-&#x5C5E;&#x6027;">&#x7ED1;&#x5B9A;HTML Style &#x5C5E;&#x6027;</h4>
+<h6 id="&#x7ED1;&#x5B9A;&#x5BF9;&#x8C61;&#x8BED;&#x6CD5;">&#x7ED1;&#x5B9A;&#x5BF9;&#x8C61;&#x8BED;&#x6CD5;</h6>
+<p>&#x8FD9;&#x4E2A;&#x548C;&#x7ED1;&#x5B9A;<code>class</code>&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x3002;&#x7ED1;&#x5B9A;&#x7684;&#x8BED;&#x6CD5;&#x770B;&#x8D77;&#x6765;&#x5F88;&#x50CF;CSS&#xFF0C;&#x5B9E;&#x9645;&#x662F;&#x4E00;&#x4E2A;JS&#x5BF9;&#x8C61;&#x3002;<strong>CSS &#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#x8981;&#x662F;&#x4E48;&#x662F;&#x9A7C;&#x5CF0;&#x8981;&#x4E48;&#x662F;&#x77ED;&#x6A2A;&#x7EBF;&#x5206;&#x9694;&#x7B26;(&#x77ED;&#x6A2A;&#x7EBF;&#x5F62;&#x5F0F;&#x7684;&#x9700;&#x8981;&#x5355;&#x5F15;&#x53F7;&#x5305;&#x62EC;)&#x5F62;&#x5F0F;</strong>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">&quot;{styleName1:styleVarValue1,&apos;style_name2&apos;:styleVarValue2,...}&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><code>styleName</code> (&#x9A7C;&#x5CF0;&#x5F62;&#x5F0F;)&#x548C; <code>style_name</code>(&#x77ED;&#x6A2A;&#x7EBF;&#x5F62;&#x5F0F;)&#x90FD;&#x662F;CSS &#x5C5E;&#x6027;&#x7684;&#x540D;&#x5B57;,<code>styleValue</code>&#x5219;&#x662F;&#x5BF9;&#x5E94;CSS&#x5C5E;&#x6027;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x5728;Vue&#x5B9E;&#x4F8B;&#x7684;data&#x9009;&#x9879;&#x91CC;&#x5B9A;&#x4E49;&#x4E86;&#x7684;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+       <span class="hljs-comment">&lt;!-- &#x7ED1;&#x5B9A;&#x5BF9;&#x8C61;  &#x5BF9;&#x8C61;&#x7684;&#x952E;&#x90FD;&#x662F;css&#x5C5E;&#x6027;&#xFF0C;&#x5BF9;&#x8C61;&#x7684;&#x952E;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">&quot;{color:activeColor,fontSize:size+&apos;px&apos;,&apos;border_color&apos;:borderColor}&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            <span class="hljs-comment">//&#x952E;&#x503C;&#x90FD;&#x662F; stlye &#x89C4;&#x5219;&#x503C;</span>
+            activeColor:<span class="hljs-string">&apos;red&apos;</span>,
+            size:<span class="hljs-number">18</span>,
+            borderColor:<span class="hljs-string">&apos;gray&apos;</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><strong>&#x8FD9;&#x4E2A;&#x548C;&#x7ED1;&#x5B9A;HTML Class &#x7C7B;&#x4F3C;&#xFF0C;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x662F;<code>style</code>&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x53EA;&#x8981;&#x63A7;&#x5236;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x503C;&#x5373;&#x53EF;&#x3002;</strong></p>
+<p>&#x5BF9;&#x4E8E;<code>style</code>&#x7ED1;&#x5B9A;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5B9E;&#x9645;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x66F4;&#x7B80;&#x6D01;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+       <span class="hljs-comment">&lt;!-- &#x7ED1;&#x5B9A;&#x5BF9;&#x8C61; &#x76F4;&#x63A5;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x641E;&#x6382;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">&quot;styleCollections&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            <span class="hljs-comment">//&#x952E;&#x503C;&#x90FD;&#x662F; stlye &#x89C4;&#x5219;&#x503C;</span>
+            styleCollections:{
+                   activeColor:<span class="hljs-string">&apos;red&apos;</span>,
+                size:<span class="hljs-number">18</span>,
+                   borderColor:<span class="hljs-string">&apos;gray&apos;</span>      
+            }        
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h6 id="&#x7ED1;&#x5B9A;&#x6570;&#x7EC4;&#x8BED;&#x6CD5;">&#x7ED1;&#x5B9A;&#x6570;&#x7EC4;&#x8BED;&#x6CD5;</h6>
+<p>&#x53EF;&#x4EE5;&#x5C06;&#x591A;&#x4E2A;<code>style</code>&#x5BF9;&#x8C61;&#x5E94;&#x7528;&#x5230;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E0A;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">&quot;[styleVarName1,&apos;styleVarName2&apos;,...]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><code>styleVarName</code>&#x662F;<code>style</code>&#x7684;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#xFF0C;&#x6BD4;&#x5982;&quot;font_size&quot;,&quot;color&quot;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:style</span>=<span class="hljs-string">&quot;[font_color,fontSize,others]&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            font_color:{
+                color:<span class="hljs-string">&apos;red&apos;</span>
+            },
+            fontSize:{
+                font-size:<span class="hljs-string">&apos;24px&apos;</span>;
+            },
+            others:{
+                border&#xFF1A;<span class="hljs-string">&apos;1x solid #ccc&apos;</span>,
+                padding:<span class="hljs-number">0</span>
+            }
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><code>style</code>&#x7ED1;&#x5B9A;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x662F;&#x4E00;&#x7EC4;&#x53D8;&#x91CF;&#xFF0C;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x4E2A;CSS&#x89C4;&#x5219;&#x3002;</p>
+<h4 id="v-bind&#x7ED1;&#x5B9A;&#x56DE;&#x987E;"><code>v-bind</code>&#x7ED1;&#x5B9A;&#x56DE;&#x987E;</h4>
+<p><code>v-bind</code>&#x53EF;&#x4EE5;&#x5C06;<code>class</code>&#x5C5E;&#x6027;&#x548C;CSS&#x7C7B;&#x540D;&#x7ED1;&#x5B9A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;<code>style</code>&#x5C5E;&#x6027;&#x548C;CSS&#x89C4;&#x5219;&#x7ED1;&#x5B9A;&#xFF0C;&#x7ED1;&#x5B9A;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x662F;&#x5BF9;&#x8C61;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x65B9;&#x5F0F;&#x7ED1;&#x5B9A;&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x7684;&#x540D;&#x79F0;&#x6216;&#x8005;CSS&#x89C4;&#x5219;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x4E0D;&#x542B;&#x89C4;&#x5219;&#x503C;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7ED1;&#x5B9A;<code>style</code>&#x65F6;&#x5019;&#xFF0C;&#x9047;&#x5230;&#x540D;&#x5B57;&#x590D;&#x6742;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x9A7C;&#x5CF0;&#x6216;&#x8005;&#x4E0B;&#x5212;&#x7EBF;&#x5F62;&#x5F0F;&#xFF08;&#x4E0B;&#x5212;&#x7EBF;&#x540D;&#x79F0;&#x9700;&#x8981;&#x5355;&#x5F15;&#x53F7;&#x5305;&#x88F9;&#xFF09;</p>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x65B9;&#x5F0F;&#x7ED1;&#x5B9A;&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x53D8;&#x91CF;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x7C7B;&#x540D;&#x548C;CSS&#x89C4;&#x5219;&#xFF08;&#x5305;&#x542B;&#x89C4;&#x5219;&#x503C;&#xFF09;</p>
+<h3 id="v-model">v-model</h3>
+<p>&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4EC5;&#x9650;&#x8868;&#x5355;&#x5143;&#x7D20; <code>&lt;input&gt;</code> <code>&lt;select&gt;</code> <code>&lt;textarea&gt;</code> &#x548C;&#x7EC4;&#x4EF6;&#x3002;<code>v-model</code>&#x5B9E;&#x73B0;&#x4E86;&#x6570;&#x636E;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x5355;&#x884C;&#x6587;&#x672C; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;message&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x5185;&#x5BB9;...&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;init value&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Message is: {{ message }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>    
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            message:<span class="hljs-string">&apos;&#x521D;&#x59CB;&#x5316;&apos;</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x867D;&#x7136;&#x7ED9;&#x4E86;&#x8868;&#x5355;&#x63A7;&#x4EF6;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x521D;&#x59CB;&#x503C;&quot;init vaule&quot;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;<code>v-model</code>&#x7684;&#x5B58;&#x5728;&#xFF0C;&#x8FD9;&#x4E2A;&#x521D;&#x59CB;&#x503C;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x6570;&#x636E;&#x6765;&#x6E90;&#x5219;&#x7531;Vue&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;<code>data</code>&#x9009;&#x9879;&#x63D0;&#x4F9B;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x591A;&#x884C;&#x6587;&#x672C; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Multiline message is:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;white-space: pre-line;&quot;</span>&gt;</span>{{ message }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;message&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;add multiple lines&quot;</span>&gt;</span>        <span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            message:<span class="hljs-string">&apos;&#x521D;&#x59CB;&#x5316;&apos;</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x590D;&#x9009;&#x6846; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checked&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox&quot;</span>&gt;</span>{{ checked }}<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            checked:<span class="hljs-literal">true</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x590D;&#x9009;&#x6846;&#x9ED8;&#x8BA4;&#x662F;&#x5426;&#x9009;&#x4E2D;&#x7531;<code>data</code>&#x9009;&#x9879;&#x8BBE;&#x5B9A;&#x3002;&#x6BCF;&#x6B21;&#x70B9;&#x51FB;&#x590D;&#x9009;&#x6846;&#xFF0C;&#x968F;&#x7740;&#x72B6;&#x6001;&#x6539;&#x53D8;&#xFF0C;<code>label</code>&#x663E;&#x793A;&#x7684;&#x72B6;&#x6001;&#x4E5F;&#x540C;&#x6B65;&#x6539;&#x53D8;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x591A;&#x4E2A;&#x590D;&#x9009;&#x6846; &#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox0&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;0&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checkes&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox0&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox1&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;1&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checkes&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox1&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox2&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;2&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checkes&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox2&quot;</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        &#x9009;&#x4E2D;&#x9879;&#x90FD;&#x662F;: {{checkes}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            checkes:[]
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x591A;&#x4E2A;&#x590D;&#x9009;&#x6846; &#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox0&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;0&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checkes&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox0&quot;</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox1&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;1&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checkes&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox1&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox2&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;2&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;checkes&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox2&quot;</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        &#x9009;&#x4E2D;&#x9879;&#x90FD;&#x662F;: {{checkes}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+            checkes:[]
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x591A;&#x4E2A;&#x590D;&#x9009;&#x6846;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E2A;&#x590D;&#x9009;&#x6846;&#x90FD;&#x548C;&#x6570;&#x7EC4;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x5355;&#x9009;&#x6309;&#x94AE; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;male&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;&#x7537;&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;sex&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;male&quot;</span>&gt;</span>&#x7537;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;female&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&apos;&#x5973;&apos;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;sex&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;male&quot;</span>&gt;</span>&#x5973;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        &#x6027;&#x522B;&#x662F;: {{sex}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+           sex:<span class="hljs-string">&apos;&#x7537;&apos;</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x5355;&#x9009;&#x6846;&#x7ED3;&#x679C;&#x4E92;&#x65A5;.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x4E0B;&#x62C9;&#x5355;&#x9009;&#x6309;&#x94AE; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&apos;selected&apos;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>&#x8BF7;&#x9009;&#x62E9;&#x4F60;&#x7684;&#x6027;&#x522B;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>&#x7537;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>&#x5973;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span> 
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7684;&#x6027;&#x522B;&#x662F;:{{selected}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>   
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+           selected:<span class="hljs-string">&apos;&apos;</span>
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>&#x4E0B;&#x62C9;&#x5355;&#x9009;&#xFF0C;&#x6CE8;&#x610F;<code>data</code>&#x521D;&#x59CB;&#x5316;&#x7684;&#x53D8;&#x91CF;&#x503C;&#x548C;<code>&lt;option disabled&gt;</code>&#x7684;&#x503C;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.bootcss.com/vue/2.5.22/vue.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- &#x4E0B;&#x62C9;&#x591A;&#x9009;&#x6309;&#x94AE; &#x540C;&#x6837;&#x662F;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&apos;selected&apos;</span> <span class="hljs-attr">multiple</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>&#x8BF7;&#x9009;&#x62E9;&#x4F60;&#x7684;&#x6027;&#x522B;&#xFF1A;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>&#x7537;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>&#x5973;<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span> 
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x4F60;&#x7684;&#x6027;&#x522B;&#x662F;:{{selected}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>   
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
+    <span class="hljs-keyword">var</span> app=<span class="hljs-keyword">new</span> Vue({
+       el:<span class="hljs-string">&apos;#app&apos;</span>,     
+        data:{
+           selected:[]
+        }
+    })
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="v-pre">v-pre</h3>
+<p>&#x76F4;&#x63A5;&#x5199;&#x5728;&#x5143;&#x7D20;&#x6807;&#x7B7E;&#x4E0A;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x7684;HTML&#x6807;&#x7B7E;&#x4E0D;&#x7ECF;&#x8FC7;Vue&#x7684;&#x7F16;&#x8BD1;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x663E;&#x793A;&#x539F;&#x59CB;&#x7684;&#x63D2;&#x503C;&#x6807;&#x7B7E;&#xFF0C;&#x52A0;&#x901F;&#x7F16;&#x8BD1;&#x901F;&#x5EA6;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-pre</span>&gt;</span>{{ &#x8FD9;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x7F16;&#x8BD1; }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+<p>&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF1A;</p>
+<blockquote>
+<p>{{ &#x8FD9;&#x91CC;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x7F16;&#x8BD1; }}</p>
+</blockquote>
+<p>&#x3000;</p>
+<h3 id="v-cloak">v-cloak</h3>
+<p>&#x4E5F;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x77E5;&#x9053;&#x7F16;&#x8BD1;&#x7ED3;&#x675F;&#x624D;&#x663E;&#x793A;&#x6B63;&#x786E;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4EE5;&#x514D;&#x5F53;&#x7F51;&#x901F;&#x8FC7;&#x6162;&#x663E;&#x793A;&#x5C34;&#x5C2C;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x4E00;&#x822C;&#x548C;CSS&#x89C4;&#x5219;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-css"><span class="hljs-selector-attr">[v-cloak]</span>{
+    <span class="hljs-attribute">display</span>:none;
+}
+</code></pre>
+<p>&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x4E0D;&#x663E;&#x793A;&#x63D2;&#x503C;&#x7B26;&#x53F7;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-cloak</span>&gt;</span>
+  {{ message }}
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<h3 id="v-once">v-once</h3>
+<p>&#x540C;&#x6837;&#x4E5F;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x7528;&#x5728;&#x5143;&#x7D20;&#x6216;&#x8005;&#x7EC4;&#x4EF6;&#x4E0A;&#xFF0C;&#x53EA;&#x6E32;&#x67D3;&#x4E00;&#x6B21;&#x3002;&#x53EA;&#x8981;&#x4F7F;&#x7528;&#x76EE;&#x7684;&#x662F;&#x4F18;&#x5316;&#x9875;&#x9762;&#x5237;&#x65B0;&#x6027;&#x80FD;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-once</span>&gt;</span>&#x8FD9;&#x4E2A;&#x662F;&#x4E0D;&#x518D;&#x53D8;&#x5316;: {{msg}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="data_interpolation.html" class="navigation navigation-prev " aria-label="Previous page: data选项和插值">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="computed.html" class="navigation navigation-next " aria-label="Next page: 计算属性">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vue指令","level":"1.2.3","depth":2,"next":{"title":"计算属性","level":"1.2.4","depth":2,"path":"chapter-1/computed.md","ref":"chapter-1/computed.md","articles":[]},"previous":{"title":"data选项和插值","level":"1.2.2","depth":2,"path":"chapter-1/data_interpolation.md","ref":"chapter-1/data_interpolation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-1/vue_directive.md","mtime":"2019-01-23T10:04:37.047Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T09:31:58.720Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
