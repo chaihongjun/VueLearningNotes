@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../chapter-5/" />
+    
     
     <link rel="prev" href="parent_child.html" />
     
@@ -300,6 +302,51 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" data-path="../chapter-5/">
+            
+                <a href="../chapter-5/">
+            
+                    
+                    插槽slot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter-5/anonymous_slot.html">
+            
+                <a href="../chapter-5/anonymous_slot.html">
+            
+                    
+                    匿名插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter-5/named_slot.html">
+            
+                <a href="../chapter-5/named_slot.html">
+            
+                    
+                    具名插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -352,72 +399,101 @@
 <p>&#x9996;&#x5148;&#x521D;&#x59CB;&#x5316;<code>EventBus</code>&#xFF0C;&#x5B9E;&#x9645;&#x5C31;&#x662F;&#x4E00;&#x4E2A;Vue&#x5BF9;&#x8C61;&#xFF1A;</p>
 <pre><code class="lang-vue">&lt;!-- eventbus.js &#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A; Vue &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A; EventBus--&gt;
 import Vue from &apos;Vue&apos;
-export default = new Vue()
+export default new Vue()
 </code></pre>
 <p>&#x8FD9;&#x4E2A;Vue&#x5B9E;&#x4F8B;&#x6CA1;&#x6709;DOM,&#x7C7B;&#x4F3C;&#x4E00;&#x8F86;Bus&#x7A7F;&#x68AD;&#x4E8E;&#x5404;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x3002;</p>
 <pre><code class="lang-vue">&lt;!-- &#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E00;  --&gt;
 &lt;template&gt;
-    &lt;h3&gt;&#x6211;&#x662F;&#x7EC4;&#x4EF6;one&lt;/h3&gt;
-    &lt;p&gt;&lt;/p&gt;
-    &lt;p&gt;&#x70B9;&#x51FB;&#x4E0B;&#x9762;&#x6309;&#x94AE;&#x4F20;&#x9001;&#x6570;&#x636E;&#x5230;&#x7EC4;&#x4EF6;two&lt;/p&gt;
-  &lt;button @click=&quot;sendFromOneToTwo&quot;&gt;&#x4F20;&#x503C;&#x5230;&#x7EC4;&#x4EF6;two&lt;/button&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h3&gt;&#x6211;&#x662F;&#x7EC4;&#x4EF6;one&lt;/h3&gt;
+        &lt;span class=&quot;one&quot;&gt;&lt;/span&gt;
+        &lt;p&gt;&#x70B9;&#x51FB;&#x4E0B;&#x9762;&#x6309;&#x94AE;&#x4F20;&#x9001;&#x6570;&#x636E;&#x5230;&#x7EC4;&#x4EF6;two&lt;/p&gt;
+        &lt;button @click=&quot;sendFromOneToTwo&quot;&gt;&#x4F20;&#x503C;&#x5230;&#x7EC4;&#x4EF6;two&lt;/button&gt;
+    &lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
- //&#x5B50;&#x7EC4;&#x4EF6;&#x5F15;&#x5165; eventbus
-import EventBus from &apos;./eventbus&apos;
+//&#x5B50;&#x7EC4;&#x4EF6;&#x5F15;&#x5165; eventbus
+import EventBus from &apos;@/eventbus&apos;
 export default {
     name: &apos;ComponentOne&apos;,
-    data(){
-      return {
-          message:&apos;&#x6211;&#x6765;&#x81EA;&#x7EC4;&#x4EF6;one&apos;,
-          local:&apos;&#x7EC4;&#x4EF6;one&#x539F;&#x59CB;&#x6570;&#x636E;&apos;
-      }
+    data() {
+        return {
+            message: &apos;&#x6211;&#x6765;&#x81EA;&#x7EC4;&#x4EF6;one&apos;,
+            local: &apos;&#x7EC4;&#x4EF6;one&#x539F;&#x59CB;&#x6570;&#x636E;&apos;
+        }
     },
-    methods:{
-        sendFromOneToTwo(){
+    methods: {
+        sendFromOneToTwo() {
             // &#x5411; eventbus &#x53D1;&#x9001;&#x4E8B;&#x4EF6;
-           EventBus.$emit(&quot;custom_event_one&quot;,this.message); 
-        }  
+            EventBus.$emit(&quot;custom_event_one&quot;, this.message);
+        }
+    },
+    mounted: function() {
+        //&#x7EC4;&#x4EF6;One &#x6302;&#x8F7D;&#x5B8C;&#x4E4B;&#x540E; &#x76D1;&#x542C;&#x7EC4;&#x4EF6;Two &#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x5E76;&#x4E14;&#x5BF9;&#x53D1;&#x9001;&#x6765;&#x7684;&#x6570;&#x636E;&#x505A;&#x5904;&#x7406;
+        EventBus.$on(&apos;custom_event_two&apos;, (receivedata) =&gt; {
+            this.local = receivedata
+        })
     }
 }
 &lt;/script&gt;
+&lt;style&gt;
+.container {
+    border: 1px solid #ccc;
+    text-align: center
+}
+
+.one {
+    border: 1px solid green;
+}
+&lt;/style&gt;
 </code></pre>
 <pre><code class="lang-vue">&lt;!--&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6; --&gt;
 &lt;template&gt;
-      &lt;h3&gt;&#x6211;&#x662F;&#x7EC4;&#x4EF6;Two&lt;/h3&gt;
-       &lt;p&gt;&lt;/p&gt;
-    &lt;p&gt;&#x70B9;&#x51FB;&#x4E0B;&#x9762;&#x6309;&#x94AE;&#x4F20;&#x9001;&#x6570;&#x636E;&#x5230;&#x7EC4;&#x4EF6;one&lt;/p&gt;
-  &lt;button @click=&quot;sendFromTwoToOne&quot;&gt;&#x4F20;&#x503C;&#x5230;&#x7EC4;&#x4EF6;one&lt;/button&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h3&gt;&#x6211;&#x662F;&#x7EC4;&#x4EF6;Two&lt;/h3&gt;
+        &lt;span class=&quot;two&quot;&gt;&lt;/span&gt;
+        &lt;p&gt;&#x70B9;&#x51FB;&#x4E0B;&#x9762;&#x6309;&#x94AE;&#x4F20;&#x9001;&#x6570;&#x636E;&#x5230;&#x7EC4;&#x4EF6;one&lt;/p&gt;
+        &lt;button @click=&quot;sendFromTwoToOne&quot;&gt;&#x4F20;&#x503C;&#x5230;&#x7EC4;&#x4EF6;one&lt;/button&gt;
+    &lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
- //&#x5B50;&#x7EC4;&#x4EF6;&#x5F15;&#x5165; eventbus
-import EventBus from &apos;./eventbus&apos;
+//&#x5B50;&#x7EC4;&#x4EF6;&#x5F15;&#x5165; eventbus
+import EventBus from &apos;@/eventbus&apos;
 export default {
     name: &apos;ComponentTwo&apos;,
-    data(){
-      return {
-            message:&apos;&#x6211;&#x6765;&#x81EA;&#x7EC4;&#x4EF6;two&apos;,
-            local:&apos;&#x7EC4;&#x4EF6;two&#x539F;&#x59CB;&#x6570;&#x636E;&apos;
-      }
+    data() {
+        return {
+            message: &apos;&#x6211;&#x6765;&#x81EA;&#x7EC4;&#x4EF6;two&apos;,
+            local: &apos;&#x7EC4;&#x4EF6;two&#x539F;&#x59CB;&#x6570;&#x636E;&apos;
+        }
     },
-    methods:{
-        sendTwo(){
+    methods: {
+        sendFromTwoToOne() {
             // &#x5411; eventbus &#x53D1;&#x9001;&#x4E8B;&#x4EF6;
-           EventBus.$emit(&quot;custom_event_two&quot;,this.message); 
-        }  
+            EventBus.$emit(&quot;custom_event_two&quot;, this.message);
+        }
+    },
+    mounted: function() {
+        //&#x7EC4;&#x4EF6;Two &#x6302;&#x8F7D;&#x5B8C;&#x4E4B;&#x540E; &#x76D1;&#x542C;&#x7EC4;&#x4EF6;one &#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x5E76;&#x4E14;&#x5BF9;&#x53D1;&#x9001;&#x6765;&#x7684;&#x6570;&#x636E;&#x505A;&#x5904;&#x7406;
+        EventBus.$on(&apos;custom_event_one&apos;, (receivedata) =&gt; {
+            this.local = receivedata
+        })
     }
 }
 &lt;/script&gt;
+&lt;style&gt;
+.two {
+    border: 1px solid red;
+}
+&lt;/style&gt;
 </code></pre>
 <pre><code class="lang-Vue">&lt;!-- &#x7236;&#x7EC4;&#x4EF6; --&gt;
 &lt;template&gt;
     &lt;div id=&quot;app&quot;&gt;
-            &lt;p&gt;&lt;/p&gt;
-
+            &lt;p&gt;&lt;/p&gt;          
          &lt;component-one&gt;&lt;/component-one&gt;
-
-         &lt;component-two&gt;&lt;/component-two&gt;
-
+            &lt;hr&gt;
+         &lt;component-two&gt;&lt;/component-two&gt;       
     &lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
@@ -433,13 +509,37 @@ export default {
     components: {
         ComponentOne,
         ComponentTwo
-    },
-    methods:{
-
     }
 }
 &lt;/script&gt;
 </code></pre>
+<p>&#x4EE5;&#x4E0A;&#x6709;&#x4E09;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x7236;&#x7EC4;&#x4EF6;app&#x548C;&#x5B50;&#x7EC4;&#x4EF6;one&#x548C;two&#xFF0C;&#x5176;&#x4E2D;one&#x548C;two&#x5C5E;&#x4E8E;&#x5E73;&#x7EA7;&#x5173;&#x7CFB;&#x3002;&#x4E3A;&#x4E86;&#x8BA9;one&#x548C;two&#x53EF;&#x4EE5;&#x901A;&#x4FE1;&#xFF0C;&#x518D;&#x4F7F;&#x7528;&#x4E86;EventBus,&#x5728;&#x5168;&#x5C40;&#x6CE8;&#x518C;&#x4E86;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x6865;&#x6881;,&#x5E76;&#x8BA9;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x5F15;&#x7528;:</p>
+<pre><code class="lang-vue">&lt;!-- &#x6CE8;&#x518C;&#x5168;&#x5C40;&#x7684;Bus --&gt;
+import Vue from &apos;Vue&apos;
+export default new Vue()
+&lt;!-- &#x9700;&#x8981;&#x901A;&#x4FE1;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x518D;&#x5F15;&#x5165; --&gt;
+import EventBus from &apos;@/eventbus&apos;
+</code></pre>
+<p>&#x6570;&#x636E;&#x4F20;&#x9012;&#x9700;&#x8981;&#x7684;&#x4E2D;&#x95F4;&#x6865;&#x6881;&#x5DF2;&#x7ECF;&#x6784;&#x5EFA;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x662F;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x9996;&#x5148;&#x662F;&#x6570;&#x636E;&#x53D1;&#x9001;&#x65B9;&#x901A;&#x8FC7;<code>$emit</code>&#x65B9;&#x5F0F;&#x5C06;&#x9700;&#x8981;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x7ED9;&#x5230;bus&#xFF1A;</p>
+<pre><code class="lang-vue">EventBus.$emit(custom_event,transportData)
+</code></pre>
+<p><code>custom_event</code>&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&quot;custom_event_one&quot;</p>
+<p><code>transportData</code> &#x662F;&#x8981;&#x4F20;&#x9012;&#x51FA;&#x53BB;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p><strong>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x201C;&#x53D1;&#x5C04;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x201D;&#x9700;&#x8981;&#x5728;&#x7EC4;&#x4EF6;&#x7684;<code>methods</code>&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x3002;</strong></p>
+<p><code>$emit</code>&#x662F;&#x544A;&#x8BC9;&#x201C;&#x4E2D;&#x4ECB;&#x201D;&#xFF0C;&#x4F20;&#x8F93;&#x4E00;&#x65B9;&#x901A;&#x8FC7;&#x67D0;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4E8B;&#x4EF6;&#x8981;&#x53D1;&#x9001;&#x6570;&#x636E;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x63A5;&#x6536;&#x7684;&#x4E00;&#x65B9;&#x5C31;&#x9700;&#x8981;&#x53BB;&#x76D1;&#x542C;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x5E76;&#x4E14;&#x63A5;&#x6536;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x4E8E;&#x662F;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x7684;<code>methods</code>&#xFF1A;</p>
+<pre><code class="lang-vue">EventBus.$on(custom_event,callback)
+
+EventBus.$on(custom_event,(receiveData)=&gt;{ 
+    // receiveData&#x63A5;&#x6536;&#x6765;&#x81EA;&#x53D1;&#x9001;&#x65B9;&#x7684;transportData
+    // &#x5E76;&#x5728;&#x8FD9;&#x91CC;&#x8FDB;&#x884C;&#x5904;&#x7406;
+})
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;<code>$on</code>&#x662F;&#x8D1F;&#x8D23;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#x7684;&#xFF0C;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x548C;&#x201C;&#x5F39;&#x5C04;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x201D;&#x7684;&#x540D;&#x79F0;&#x4E00;&#x81F4;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x53D1;&#x9001;&#x6765;&#x7684;&#x6570;&#x636E;&#x3002;<strong>&#x8FD9;&#x91CC;&#x5EFA;&#x8BAE;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x53EA;&#x6709;&#x8FD9;&#x6837;&#xFF0C;&#x5728;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5185;&#x7684;this&#x624D;&#x80FD;&#x6307;&#x5411;&#x6570;&#x636E;&#x63A5;&#x6536;&#x65B9;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;</strong>&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x7684;&#x76D1;&#x542C;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x5185;&#x3002;</p>
+<blockquote>
+<p>&#x53C2;&#x8003; &#xFF1A; <a href="https://www.cnblogs.com/tiny-jiao/p/6527449.html" target="_blank">https://www.cnblogs.com/tiny-jiao/p/6527449.html</a></p>
+<p><a href="https://juejin.im/post/5b2a05f26fb9a00e70686713" target="_blank">https://juejin.im/post/5b2a05f26fb9a00e70686713</a></p>
+<p><a href="https://www.jianshu.com/p/eeeefde4f3b7" target="_blank">https://www.jianshu.com/p/eeeefde4f3b7</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -467,10 +567,14 @@ export default {
 
             
                 
-                <a href="parent_child.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 父子组件传值">
+                <a href="parent_child.html" class="navigation navigation-prev " aria-label="Previous page: 父子组件传值">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../chapter-5/" class="navigation navigation-next " aria-label="Next page: 插槽slot">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -479,7 +583,7 @@ export default {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"兄弟组件传值","level":"1.5.2","depth":2,"previous":{"title":"父子组件传值","level":"1.5.1","depth":2,"path":"chapter-4/parent_child.md","ref":"chapter-4/parent_child.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-4/sblings.md","mtime":"2019-01-26T08:20:22.013Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-26T09:29:07.952Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"兄弟组件传值","level":"1.5.2","depth":2,"next":{"title":"插槽slot","level":"1.6","depth":1,"path":"chapter-5/README.md","ref":"chapter-5/README.md","articles":[{"title":"匿名插槽","level":"1.6.1","depth":2,"path":"chapter-5/anonymous_slot.md","ref":"chapter-5/anonymous_slot.md","articles":[]},{"title":"具名插槽","level":"1.6.2","depth":2,"path":"chapter-5/named_slot.md","ref":"chapter-5/named_slot.md","articles":[]}]},"previous":{"title":"父子组件传值","level":"1.5.1","depth":2,"path":"chapter-4/parent_child.md","ref":"chapter-4/parent_child.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-4/sblings.md","mtime":"2019-01-29T07:01:19.687Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-29T10:22:24.134Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
