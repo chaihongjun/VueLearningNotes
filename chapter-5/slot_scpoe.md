@@ -4,7 +4,7 @@
 
 ```vue
 <!-- App.vue -->
-<template>
+<template slot-scope="father">
      <div id="app">
          <p>{{message}}</p>
           <alert-box>
