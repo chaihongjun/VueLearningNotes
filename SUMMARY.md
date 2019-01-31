@@ -18,4 +18,5 @@
 * [插槽slot](chapter-5/README.md)
     * [匿名插槽](chapter-5/anonymous_slot.md)
     * [具名插槽](chapter-5/named_slot.md)
+    * [作用域插槽](chapter-5/slot_scpoe.md)
 
