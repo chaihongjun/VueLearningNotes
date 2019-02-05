@@ -1,0 +1,606 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>作用域插槽 · Vue学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Chaihongjun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="named_slot.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter-1/">
+            
+                <a href="../chapter-1/">
+            
+                    
+                    vue基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter-1/start_up.html">
+            
+                <a href="../chapter-1/start_up.html">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter-1/data_interpolation.html">
+            
+                <a href="../chapter-1/data_interpolation.html">
+            
+                    
+                    data选项和插值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter-1/vue_directive.html">
+            
+                <a href="../chapter-1/vue_directive.html">
+            
+                    
+                    vue指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter-1/computed.html">
+            
+                <a href="../chapter-1/computed.html">
+            
+                    
+                    计算属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter-1/methods.html">
+            
+                <a href="../chapter-1/methods.html">
+            
+                    
+                    事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chapter-1/template.html">
+            
+                <a href="../chapter-1/template.html">
+            
+                    
+                    模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chapter-1/lifecycle.html">
+            
+                <a href="../chapter-1/lifecycle.html">
+            
+                    
+                    生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter-2/">
+            
+                <a href="../chapter-2/">
+            
+                    
+                    Vue组件初识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter-2/components_declaration.html">
+            
+                <a href="../chapter-2/components_declaration.html">
+            
+                    
+                    组件声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter-3/">
+            
+                <a href="../chapter-3/">
+            
+                    
+                    其他API，选项和概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter-4/">
+            
+                <a href="../chapter-4/">
+            
+                    
+                    Vue组件深入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter-4/parent_child.html">
+            
+                <a href="../chapter-4/parent_child.html">
+            
+                    
+                    父子组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter-4/sblings.html">
+            
+                <a href="../chapter-4/sblings.html">
+            
+                    
+                    兄弟组件传值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter-4/dynamic_componets.html">
+            
+                <a href="../chapter-4/dynamic_componets.html">
+            
+                    
+                    动态组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    插槽slot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="anonymous_slot.html">
+            
+                <a href="anonymous_slot.html">
+            
+                    
+                    匿名插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="named_slot.html">
+            
+                <a href="named_slot.html">
+            
+                    
+                    具名插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.3" data-path="slot_scpoe.html">
+            
+                <a href="slot_scpoe.html">
+            
+                    
+                    作用域插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >作用域插槽</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;">&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;</h1>
+<p>&#x524D;&#x9762;&#x7684;&#x533F;&#x540D;&#x63D2;&#x69FD;&#xFF0C;&#x5177;&#x540D;&#x63D2;&#x69FD;&#x90FD;&#x662F;&#x4E0D;&#x5E26;&#x6570;&#x636E;&#x7684;&#x63D2;&#x69FD;&#xFF0C;&#x76F4;&#x63A5;&#x5199;&#x5728;&#x6A21;&#x677F;&#x5185;&#x7684;&#xFF0C;&#x800C;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#x662F;&#x643A;&#x5E26;&#x6570;&#x636E;&#x7684;&#xFF0C;&#x901A;&#x8FC7;<code>v-bind</code>&#x7ED1;&#x5B9A;&#x6570;&#x636E;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x9664;&#x4E86;&#x6709;&#x4F20;&#x7EDF;&#x7684;&#x4F7F;&#x7528;&#x7684;&#x5177;&#x4F53;&#x63D2;&#x69FD;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x5F15;&#x5165;&#x4E86;&#x4E24;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#xFF0C;&#x7531;&#x4E8E;&#x662F;&#x591A;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x7ED9;&#x63D2;&#x69FD;&#x8BBE;&#x7F6E;<code>name</code>&#x5C5E;&#x6027;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x5206;&#x8FA8;&#x8BC6;&#x522B;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#x7684;&#x6570;&#x636E;&#x8D70;&#x5411;&#xFF1A;</p>
+<ol>
+<li>&#x7236;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;<code>:infos=&quot;lists&quot;</code>&#x5C06;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;<code>lists</code>&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;</li>
+<li>&#x5B50;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;<code>props:{infos:Array}</code>&#x63A5;&#x6536;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x503C;</li>
+<li>&#x7531;&#x4E8E;&#x63A5;&#x6536;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x5185;&#x901A;&#x8FC7;<code>v-for</code>&#x5C06;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x5FAA;&#x73AF;</li>
+<li>&#x5C06;&#x9700;&#x8981;&#x5FAA;&#x73AF;&#x7684;&#x5185;&#x5BB9;&#x901A;&#x8FC7;<code>slot</code>&#x5360;&#x4F4D;&#xFF0C;&#x56E0;&#x4E3A;&#x5FAA;&#x73AF;&#x7684;&#x5185;&#x5BB9;&#x5E94;&#x8BE5;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x5206;&#x53D1;&#x800C;&#x6765;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x5C06;&#x6570;&#x636E;&#x518D;&#x6B21;&#x56DE;&#x4F20;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;</li>
+<li>&#x6240;&#x4EE5;&#xFF0C;<code>&lt;slot :info=info&gt;&lt;/slot&gt;</code> &#x518D;&#x6B21;&#x6570;&#x636E;&#x56DE;&#x4F20;&#x7ED9;&#x4E86;&#x7236;&#x7EC4;&#x4EF6;&#x3002;&#x7B49;&#x53F7;&#x540E;&#x9762;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x5FAA;&#x73AF;&#x4F53;&#x5185;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x7236;&#x7EC4;&#x4EF6;&#x518D;&#x5728;&#x6A21;&#x677F;&#x4E0A;&#x901A;&#x8FC7;<code>slot-scope=&quot;props&quot;</code>&#x63A5;&#x6536;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x800C;&#x6765;&#x7684;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x88AB;&#x5E94;&#x7528;&#x5230;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;slot&#x4E2D;</li>
+</ol>
+<pre><code class="lang-vue">&lt;!-- App.vue --&gt;
+&lt;template&gt;
+    &lt;div id=&quot;app&quot;&gt;
+        &lt;p&gt;&lt;/p&gt;
+          &lt;!-- &#x5C06;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x6570;&#x636E;&#x901A;&#x8FC7; infos &#x5C5E;&#x6027;&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6; --&gt;
+        &lt;alert-box :infos=&quot;lists&quot;&gt;
+            &lt;!-- &#x5177;&#x540D;&#x63D2;&#x69FD; --&gt;
+            &lt;span slot=&quot;default&quot;&gt;&#x5177;&#x540D;&#x63D2;&#x69FD;&#x65B9;&#x5F0F;&#xFF1A;&lt;/span&gt;
+            &lt;span slot=&quot;level&quot;&gt;&lt;/span&gt;
+            &lt;span slot=&quot;details&quot;&gt;&lt;/span&gt;
+            &lt;span slot=&quot;zone&quot;&gt;&#x63D2;&#x69FD;&#x4F5C;&#x7528;&#x57DF;&#x65B9;&#x5F0F;&#xFF1A;&lt;/span&gt;
+            &lt;!-- &#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD; --&gt;
+             &lt;!-- props &#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x540D;&#x79F0; &#x7528;&#x6765;&#x63A5;&#x6536;&#x5B50;&#x7EC4;&#x4EF6;slot&#x7ED1;&#x5B9A;&#x4E4B;&#x540E;&#x4F20;&#x6765;&#x7684;&#x6570;&#x636E; --&gt;
+              &lt;!-- info &#x662F;&#x4ECE;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x6765;&#x7684;&#x6570;&#x636E; --&gt;
+            &lt;span slot-scope=&quot;props&quot;&gt;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x503C;&#xFF1A;&lt;/span&gt;
+            &lt;!-- todo &#x662F;&#x4ECE;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x6765;&#x7684;&#x6570;&#x636E; --&gt;
+            &lt;span slot-scope=&quot;props&quot; slot=&quot;todos&quot;&gt;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x503C;&#xFF1A;-&lt;/span&gt;
+        &lt;/alert-box&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import AlertBox from &apos;@/components/AlertBox.vue&apos;
+export default {
+    data() {
+        return {
+            message: &apos;&#x8B66;&#x544A;&#x4FE1;&#x606F;!&apos;,
+            level: &quot;Waring!&quot;,
+            details: &quot;404 NOT FOUND!&quot;,
+            lists: [1, 2, 3, 4, 5]
+        }
+    },
+    components: {
+        &quot;alert-box&quot;: AlertBox
+    }
+}
+&lt;/script&gt;
+</code></pre>
+<pre><code class="lang-vue">&lt;template&gt;
+    &lt;div class=&quot;demo-alert-box&quot;&gt;
+        &lt;p&gt;
+            &lt;slot name=&quot;default&quot;&gt;&lt;/slot&gt;
+        &lt;/p&gt;
+        &lt;p&gt;&#x9519;&#x8BEF;&#x7EA7;&#x522B;&#xFF1A;&lt;slot name=&quot;level&quot;&gt;&lt;/slot&gt;
+        &lt;/p&gt;
+        &lt;!-- &#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5176;&#x4ED6;&#x7684;&#x4FE1;&#x606F; --&gt;
+        &lt;p&gt;&#x9519;&#x8BEF;&#x8BE6;&#x60C5;&#xFF1A;&lt;slot name=&quot;details&quot;&gt;&lt;/slot&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;slot name=&quot;zone&quot;&gt;&lt;/slot&gt;
+        &lt;/p&gt;
+        &lt;ul&gt;
+            &lt;!-- infos &#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x63A5;&#x6536;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E; --&gt;
+            &lt;li v-for=&quot;info in infos&quot; :key=&quot;info.index&quot;&gt;
+                &lt;!-- &#x5BF9;&#x5E94;&#x7B2C;&#x4E00;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD; --&gt;
+                &lt;!--  &#x901A;&#x8FC7;&#x5C5E;&#x6027;:info &#x5C06;&#x5B50;&#x7EC4;&#x4EF6;&#x63A5;&#x53D7;&#x7684;&#x6570;&#x636E;&#x518D;&#x4F20;&#x56DE;&#x7236;&#x7EC4;&#x4EF6; --&gt;
+                &lt;slot :info=info&gt;&lt;/slot&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li v-for=&quot;todo in todos&quot; :key=&quot;todo.index&quot;&gt;
+                &lt;!-- &#x5BF9;&#x5E94;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD; --&gt;
+                &lt;!--  &#x901A;&#x8FC7;&#x5C5E;&#x6027;:todo &#x5C06;&#x5B50;&#x7EC4;&#x4EF6;&#x63A5;&#x53D7;&#x7684;&#x6570;&#x636E;&#x518D;&#x4F20;&#x56DE;&#x7236;&#x7EC4;&#x4EF6; --&gt;
+                &lt;slot :todo=todo name=&quot;todos&quot;&gt;&lt;/slot&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+    data() {
+        return {
+            msg: &quot;&#x6211;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&quot;,
+            todos: [
+                { no: 1, sex: &apos;male&apos;, name: &apos;chj&apos; },
+                { no: 2, sex: &apos;female&apos;, name: &apos;xm&apos; },
+                { no: 3, sex: &apos;female&apos;, name: &apos;xx&apos; }
+            ]
+        }
+    },
+    props: {
+        infos: Array
+    }
+}
+&lt;/script&gt;
+&lt;style&gt;
+.demo-alert-box {
+    width: 300px;
+    padding: 10px 20px;
+    background: #f3beb8;
+    border: 1px solid #f09898;
+}
+&lt;/style&gt;
+</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#x7684;&#x6570;&#x636E;&#x6D41;&#x5411;&#x89E3;&#x6790;:</p>
+<p>&#x7531;&#x4E8E;&#x793A;&#x4F8B;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x63D2;&#x69FD;&#xFF0C;&#x4E3A;&#x4E86;&#x5206;&#x8FA8;&#x51FA;&#x533A;&#x522B;&#xFF0C;&#x6240;&#x4EE5;&#x7ED9;&#x7B2C;&#x4E8C;&#x4E2A;&#x63D2;&#x69FD;&#x540D;&#x547D;<code>todos</code>&#x3002;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x8D70;&#x5411;&#x662F;&#x76F4;&#x63A5;&#x4ECE;&#x5B50;&#x7EC4;&#x4EF6;&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x3002;&#x5B50;&#x7EC4;&#x4EF6;&#x5185;<code>&lt;slot :todo=todo&gt;&lt;/slot&gt;</code>&#x901A;&#x8FC7;&#x5C5E;&#x6027;<code>:todo</code>&#x5C06;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;<code>todo</code>&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x7236;&#x7EC4;&#x4EF6;&#x3002;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;<code>todo</code>&#x672C;&#x8EAB;&#x662F;&#x5B50;&#x7EC4;&#x4EF6;&#x6570;&#x636E;<code>todos</code>&#x7684;&#x5B50;&#x5BF9;&#x8C61;&#x3002;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;<code>todo</code>&#x5C06;&#x4F1A;&#x4F20;&#x9012;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x7684;<code>slot-scope</code>&#x5C5E;&#x6027;&#x4E0A;&#xFF0C;&#x8FD9;&#x91CC;&#x8FD8;&#x662F;&#x7ED9;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x540D;&#x79F0;&#x4E3A;<code>props</code>&#x3002;&#x4E8E;&#x662F;&#xFF0C;<code>props.todo</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;<code>todo</code>&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x53D8;&#x6210;&#x4E86;<code>props</code>&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</p>
+<p><code>slot-scope</code>&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x662F;&#x7ECF;&#x5E38;&#x548C;&#x9700;&#x8981;&#x5FAA;&#x73AF;&#x8F93;&#x51FA;&#x7684;&#x5217;&#x8868;&#x6216;&#x7C7B;&#x5217;&#x8868;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
+<blockquote>
+<p> &#x53C2;&#x8003; <a href="https://www.jianshu.com/p/a0a83029a217" target="_blank">https://www.jianshu.com/p/a0a83029a217</a></p>
+<p>&#x200B;    <a href="https://segmentfault.com/a/1190000015884505" target="_blank">https://segmentfault.com/a/1190000015884505</a>    </p>
+<p>&#x200B;    <a href="https://www.jianshu.com/p/baf1517e88ef" target="_blank">https://www.jianshu.com/p/baf1517e88ef</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="named_slot.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 具名插槽">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"作用域插槽","level":"1.6.3","depth":2,"previous":{"title":"具名插槽","level":"1.6.2","depth":2,"path":"chapter-5/named_slot.md","ref":"chapter-5/named_slot.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-5/slot_scpoe.md","mtime":"2019-02-05T09:02:10.317Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T13:55:02.024Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

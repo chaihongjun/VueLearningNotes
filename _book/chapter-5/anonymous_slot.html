@@ -297,6 +297,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.3" data-path="../chapter-4/dynamic_componets.html">
+            
+                <a href="../chapter-4/dynamic_componets.html">
+            
+                    
+                    动态组件
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -342,6 +355,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.3" data-path="slot_scpoe.html">
+            
+                <a href="slot_scpoe.html">
+            
+                    
+                    作用域插槽
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -353,8 +379,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://chaihongjun.me" target="blank" class="gitbook-link">
-           Published by Chaihongjun
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -393,11 +419,11 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x533F;&#x540D;&#x63D2;&#x69FD;">&#x533F;&#x540D;&#x63D2;&#x69FD;</h1>
-<p>&#x533F;&#x540D;&#x63D2;&#x69FD;&#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x6709;&#x540D;&#x5B57;&#x7684;<code>default</code>&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x822C;&#x4E0D;&#x7F72;&#x540D;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x5C31;&#x5F53;&#x4F5C;&#x533F;&#x540D;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x533F;&#x540D;&#x63D2;&#x69FD;&#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x6709;&#x540D;&#x5B57;&#x7684;<code>default</code>&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x822C;&#x4E0D;&#x7F72;&#x540D;&#x5B83;&#x7684;<code>name</code>&#x5C5E;&#x6027;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x5C31;&#x5F53;&#x4F5C;&#x533F;&#x540D;&#x5904;&#x7406;&#x3002;</p>
 <pre><code class="lang-vue">&lt;!-- App.vue --&gt;
 &lt;template&gt;
      &lt;div id=&quot;app&quot;&gt;
-         &lt;p&gt;{{message}}&lt;/p&gt;
+         &lt;p&gt;&lt;/p&gt;
          &lt;alert-box&gt;404 not found!&lt;/alert-box&gt;
      &lt;/div&gt;
 &lt;/template&gt;
@@ -428,7 +454,7 @@ export default {}
 &lt;/script&gt;
 &lt;style&gt;
 .demo-alert-box {
-    width:200px;
+    width:3200px;
     padding: 10px 20px;
     background: #f3beb8;
     border: 1px solid #f09898;
@@ -437,6 +463,22 @@ export default {}
 </code></pre>
 <p>&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF1A;</p>
 <p><img src="img/anonymous.png" alt="&#x533F;&#x540D;&#x63D2;&#x69FD;"></p>
+<p>&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x8B66;&#x544A;&#x4FE1;&#x606F;!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-alert-box&quot;</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Error!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+            404 not found!
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x5206;&#x6790;&#x7ED3;&#x679C;&#x53D1;&#x73B0;<code>&lt;alert-box&gt;404 not found!&lt;/alert-box&gt;</code>&#x88AB;&#x6A21;&#x677F;&#x89E3;&#x6790;&#x4E3A;&#x4E86;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-alert-box&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Error!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    404 not found!
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>&#x518D;&#x6DF1;&#x5165;&#xFF0C;<code>slot</code>&#x6807;&#x7B7E;&#x5BF9;&#x88AB;<code>404 not found!</code>&#x66FF;&#x6362;&#xFF0C;&#x800C;<code>404 not found!</code>&#x5219;&#x6B63;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x6240;&#x4EE5;&#xFF0C;<code>slot</code>&#x7684;&#x4F4D;&#x7F6E;&#x51B3;&#x5B9A;&#x4E86;&#x5206;&#x53D1;&#x7684;&#x5185;&#x5BB9;&#x8981;&#x5728;&#x54EA;&#x91CC;&#x663E;&#x793A;&#xFF0C;&#x800C;&#x5206;&#x53D1;&#x663E;&#x793A;&#x7684;&#x5185;&#x5BB9;&#x5219;&#x662F;&#x7531;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x800C;&#x6765;&#xFF0C;<code>slot</code>&#x7528;&#x6765;&#x201C;&#x5360;&#x4F4D;&#x201D;&#x6700;&#x5408;&#x9002;&#x4E0D;&#x8FC7;&#x3002;</p>
 
                                 
                                 </section>
@@ -480,7 +522,7 @@ export default {}
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"匿名插槽","level":"1.6.1","depth":2,"next":{"title":"具名插槽","level":"1.6.2","depth":2,"path":"chapter-5/named_slot.md","ref":"chapter-5/named_slot.md","articles":[]},"previous":{"title":"插槽slot","level":"1.6","depth":1,"path":"chapter-5/README.md","ref":"chapter-5/README.md","articles":[{"title":"匿名插槽","level":"1.6.1","depth":2,"path":"chapter-5/anonymous_slot.md","ref":"chapter-5/anonymous_slot.md","articles":[]},{"title":"具名插槽","level":"1.6.2","depth":2,"path":"chapter-5/named_slot.md","ref":"chapter-5/named_slot.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-5/anonymous_slot.md","mtime":"2019-01-29T10:21:01.289Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-29T10:22:24.134Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"匿名插槽","level":"1.6.1","depth":2,"next":{"title":"具名插槽","level":"1.6.2","depth":2,"path":"chapter-5/named_slot.md","ref":"chapter-5/named_slot.md","articles":[]},"previous":{"title":"插槽slot","level":"1.6","depth":1,"path":"chapter-5/README.md","ref":"chapter-5/README.md","articles":[{"title":"匿名插槽","level":"1.6.1","depth":2,"path":"chapter-5/anonymous_slot.md","ref":"chapter-5/anonymous_slot.md","articles":[]},{"title":"具名插槽","level":"1.6.2","depth":2,"path":"chapter-5/named_slot.md","ref":"chapter-5/named_slot.md","articles":[]},{"title":"作用域插槽","level":"1.6.3","depth":2,"path":"chapter-5/slot_scpoe.md","ref":"chapter-5/slot_scpoe.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-5/anonymous_slot.md","mtime":"2019-01-31T10:49:04.573Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-05T13:55:02.024Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

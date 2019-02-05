@@ -15,6 +15,7 @@
 * [Vue组件深入](chapter-4/README.md)
     * [父子组件传值](chapter-4/parent_child.md)
     * [兄弟组件传值](chapter-4/sblings.md)
+    * [动态组件](chapter-4/dynamic_componets.md)
 * [插槽slot](chapter-5/README.md)
     * [匿名插槽](chapter-5/anonymous_slot.md)
     * [具名插槽](chapter-5/named_slot.md)
