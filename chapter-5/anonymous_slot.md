@@ -27,7 +27,7 @@ components:{
 ```
 
 ```vue
-<!-- alert-box.vue -->
+<!-- AlertBox.vue -->
 <template>
     <div class="demo-alert-box">
         <strong>Error!</strong>
