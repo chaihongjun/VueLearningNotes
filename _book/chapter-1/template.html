@@ -422,6 +422,64 @@
 <p>&#x524D;&#x9762;&#x5B66;&#x4E60;&#x4E86;&#x5F88;&#x591A;&#x548C;&#x6307;&#x4EE4;&#x53CA;&#x65B9;&#x6CD5;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x8FD9;&#x91CC;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;&#x6A21;&#x677F;&#x6982;&#x5FF5;&#x3002;Vue&#x4E2D;&#x7684;&#x6A21;&#x677F;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x7406;&#x89E3;&#x6210;&#x4F7F;&#x7528;HTML&#x6807;&#x7B7E;&#xFF08;&#x6216;&#x5219;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#x540E;&#x9762;&#x5B66;&#x4E60;&#x5230;&#x5C31;&#x662F;&#x7EC4;&#x4EF6;&#x540D;&#xFF09;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x3002;</p>
 <p>Vue&#x7684;&#x6A21;&#x677F;&#x8BED;&#x6CD5;&#x5141;&#x8BB8;&#x4EE5;&#x58F0;&#x660E;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;DOM&#x548C;Vue&#x7684;&#x5B9E;&#x4F8B;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x8D77;&#x6765;&#x3002;</p>
 <p>&#x524D;&#x9762;&#x5B66;&#x4E60;&#x7684;<code>{{}}</code>&#x63D2;&#x503C;&#x8BED;&#x6CD5;&#x548C;<code>v-*</code>&#x6307;&#x4EE4;&#x90FD;&#x4F5C;&#x7528;&#x4E8E;&#x6A21;&#x677F;&#x4E2D;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x6A21;&#x677F;&#x7684;&#x5B9A;&#x4E49;&#x53EF;&#x4EE5;&#x53C2;&#x770B;&#x590D;&#x4E60;&#xFF1A;</p>
+<blockquote>
+<p>&#x300A;7&#x79CD;&#x65B9;&#x6CD5;&#x5728;Vue.js&#x4E2D;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x6A21;&#x677F;&#x300B;](<a href="https://chaihongjun.me/javascript/279.html" target="_blank">https://chaihongjun.me/javascript/279.html</a>)</p>
+</blockquote>
+<p>&#x7B80;&#x8981;&#x5185;&#x5BB9;&#xFF1A;</p>
+<ol>
+<li>&#x5B57;&#x7B26;&#x4E32;</li>
+</ol>
+<pre><code class="lang-vue">Vue.component(``&apos;my-checkbox&apos;``, { 
+template: `&lt;div class=``&quot;checkbox-wrapper&quot;` `@click=``&quot;check&quot;``&gt;&lt;div :class=``&quot;{ checkbox: true, checked: checked }&quot;``&gt;&lt;/div&gt;&lt;div class=``&quot;title&quot;``&gt;&lt;/div&gt;&lt;/div&gt;`,
+    ``data() {
+        ``return` `{ checked: ``false``, title: ``&apos;Check me&apos;` `}
+    ``},
+    ``methods: {
+        ``check() { ``this``.checked = !``this``.checked; }
+    ``}});
+</code></pre>
+<ol>
+<li>&#x6A21;&#x677F;&#x5B57;&#x9762;&#x91CF;</li>
+</ol>
+<pre><code class="lang-vue">Vue.component(&apos;my-checkbox&apos;, { 
+template: `&lt;div class=&quot;checkbox-wrapper&quot; @click=&quot;check&quot;&gt;
+                            &lt;div :class=&quot;{ checkbox: true, checked: checked }&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;title&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;`,
+    data() {
+        return { checked: false, title: &apos;Check me&apos; }
+    },
+    methods: {
+        check() { this.checked = !this.checked; }
+    }});
+</code></pre>
+<ol>
+<li>x-Template</li>
+</ol>
+<pre><code class="lang-vue">Vue.component(&apos;my-checkbox&apos;, { 
+   template: &apos;#checkbox-template&apos;,
+       data() {
+           return { checked: false, title: &apos;Check me&apos; }
+       },
+       methods: {
+           check() { this.checked = !this.checked; }
+       }});
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/x-template&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox-template&quot;</span>&gt;</span><span class="handlebars"><span class="xml">
+       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;checkbox-wrapper&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;check&quot;</span>&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">:class</span>=<span class="hljs-string">&quot;{ checkbox: true, checked: checked }&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<ol>
+<li>&#x5185;&#x8054;&#x6A21;&#x677F;</li>
+<li>render&#x65B9;&#x6CD5;</li>
+<li>JSX</li>
+<li>SFC &#x5355;&#x6587;&#x4EF6;&#x7EC4;&#x4EF6;</li>
+</ol>
+<p>&#x5E38;&#x7528;&#x7684;&#x8FD8;&#x662F;&#x7B2C;1&#xFF0C;2&#xFF0C;3&#xFF0C;7&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
 
                                 
                                 </section>
@@ -465,7 +523,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"模板","level":"1.2.6","depth":2,"next":{"title":"生命周期","level":"1.2.7","depth":2,"path":"chapter-1/lifecycle.md","ref":"chapter-1/lifecycle.md","articles":[]},"previous":{"title":"事件","level":"1.2.5","depth":2,"path":"chapter-1/methods.md","ref":"chapter-1/methods.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-1/template.md","mtime":"2019-01-22T11:17:09.728Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-14T13:09:54.539Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"模板","level":"1.2.6","depth":2,"next":{"title":"生命周期","level":"1.2.7","depth":2,"path":"chapter-1/lifecycle.md","ref":"chapter-1/lifecycle.md","articles":[]},"previous":{"title":"事件","level":"1.2.5","depth":2,"path":"chapter-1/methods.md","ref":"chapter-1/methods.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-1/template.md","mtime":"2019-02-26T12:48:03.783Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-26T12:48:59.388Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
