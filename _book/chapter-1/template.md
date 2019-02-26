@@ -11,7 +11,7 @@ Vue的模板语法允许以声明方式，将DOM和Vue的实例数据绑定起�
 1. 字符串
 
 ```vue
-Vue.component(``'my-checkbox'``, { 
+Vue.component('my-checkbox', { 
 template: `<div class=``"checkbox-wrapper"` `@click=``"check"``><div :class=``"{ checkbox: true, checked: checked }"``></div><div class=``"title"``>{{ title }}</div></div>`,
     ``data() {
         ``return` `{ checked: ``false``, title: ``'Check me'` `}
