@@ -8,27 +8,27 @@ Vue的模板语法允许以声明方式，将DOM和Vue的实例数据绑定起�
 
 简要内容：
 
-1. 字符串
+1. 字符串，将HTML模板内容包裹在引号内，以字符串形式表示，HTML模板内容必须连续书写
 
 ```vue
 Vue.component('my-checkbox', { 
-template: `<div class=``"checkbox-wrapper"` `@click=``"check"``><div :class=``"{ checkbox: true, checked: checked }"``></div><div class=``"title"``>{{ title }}</div></div>`,
-    ``data() {
-        ``return` `{ checked: ``false``, title: ``'Check me'` `}
-    ``},
-    ``methods: {
-        ``check() { ``this``.checked = !``this``.checked; }
-    ``}});
+template: '<div class="checkbox-wrapper" @click="check"><div :class="{ checkbox: true, checked: checked }"></div><div class="title">{{ title }}</div></div>',
+    data() {
+        return{ checked: false, title: 'Check me'}
+    },
+    methods: {
+        check() { this.checked = !this.checked; }
+    }});
 ```
 
-2. 模板字面量
+2. 模板字面量，使用`\``（反引号）方式将HTML模板包裹起来，允许换行。
 
 ```vue
 Vue.component('my-checkbox', { 
 template: `<div class="checkbox-wrapper" @click="check">
-                            <div :class="{ checkbox: true, checked: checked }"></div>
-                            <div class="title">{{ title }}</div>
-                        </div>`,
+                <div :class="{ checkbox: true, checked: checked }"></div>
+                <div class="title">{{ title }}</div>
+            </div>`,
     data() {
         return { checked: false, title: 'Check me' }
     },

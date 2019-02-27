@@ -379,8 +379,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://chaihongjun.me" target="blank" class="gitbook-link">
+           Published by Chaihongjun
         </a>
     </li>
 </ul>
@@ -424,25 +424,25 @@
 <p>&#x524D;&#x9762;&#x5B66;&#x4E60;&#x7684;<code>{{}}</code>&#x63D2;&#x503C;&#x8BED;&#x6CD5;&#x548C;<code>v-*</code>&#x6307;&#x4EE4;&#x90FD;&#x4F5C;&#x7528;&#x4E8E;&#x6A21;&#x677F;&#x4E2D;&#x3002;</p>
 <p>&#x7B80;&#x8981;&#x5185;&#x5BB9;&#xFF1A;</p>
 <ol>
-<li>&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5C06;HTML&#x6A21;&#x677F;&#x5185;&#x5BB9;&#x5305;&#x88F9;&#x5728;&#x5F15;&#x53F7;&#x5185;&#xFF0C;&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x8868;&#x793A;&#xFF0C;HTML&#x6A21;&#x677F;&#x5185;&#x5BB9;&#x5FC5;&#x987B;&#x8FDE;&#x7EED;&#x4E66;&#x5199;</li>
 </ol>
 <pre><code class="lang-vue">Vue.component(&apos;my-checkbox&apos;, { 
-template: `&lt;div class=``&quot;checkbox-wrapper&quot;` `@click=``&quot;check&quot;``&gt;&lt;div :class=``&quot;{ checkbox: true, checked: checked }&quot;``&gt;&lt;/div&gt;&lt;div class=``&quot;title&quot;``&gt;&lt;/div&gt;&lt;/div&gt;`,
-    ``data() {
-        ``return` `{ checked: ``false``, title: ``&apos;Check me&apos;` `}
-    ``},
-    ``methods: {
-        ``check() { ``this``.checked = !``this``.checked; }
-    ``}});
+template: &apos;&lt;div class=&quot;checkbox-wrapper&quot; @click=&quot;check&quot;&gt;&lt;div :class=&quot;{ checkbox: true, checked: checked }&quot;&gt;&lt;/div&gt;&lt;div class=&quot;title&quot;&gt;&lt;/div&gt;&lt;/div&gt;&apos;,
+    data() {
+        return{ checked: false, title: &apos;Check me&apos;}
+    },
+    methods: {
+        check() { this.checked = !this.checked; }
+    }});
 </code></pre>
 <ol>
-<li>&#x6A21;&#x677F;&#x5B57;&#x9762;&#x91CF;</li>
+<li>&#x6A21;&#x677F;&#x5B57;&#x9762;&#x91CF;&#xFF0C;&#x4F7F;&#x7528;```&#xFF08;&#x53CD;&#x5F15;&#x53F7;&#xFF09;&#x65B9;&#x5F0F;&#x5C06;HTML&#x6A21;&#x677F;&#x5305;&#x88F9;&#x8D77;&#x6765;&#xFF0C;&#x5141;&#x8BB8;&#x6362;&#x884C;&#x3002;</li>
 </ol>
 <pre><code class="lang-vue">Vue.component(&apos;my-checkbox&apos;, { 
 template: `&lt;div class=&quot;checkbox-wrapper&quot; @click=&quot;check&quot;&gt;
-                            &lt;div :class=&quot;{ checkbox: true, checked: checked }&quot;&gt;&lt;/div&gt;
-                            &lt;div class=&quot;title&quot;&gt;&lt;/div&gt;
-                        &lt;/div&gt;`,
+                &lt;div :class=&quot;{ checkbox: true, checked: checked }&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;title&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;`,
     data() {
         return { checked: false, title: &apos;Check me&apos; }
     },
@@ -523,7 +523,7 @@ template: `&lt;div class=&quot;checkbox-wrapper&quot; @click=&quot;check&quot;&g
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"模板","level":"1.2.6","depth":2,"next":{"title":"生命周期","level":"1.2.7","depth":2,"path":"chapter-1/lifecycle.md","ref":"chapter-1/lifecycle.md","articles":[]},"previous":{"title":"事件","level":"1.2.5","depth":2,"path":"chapter-1/methods.md","ref":"chapter-1/methods.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-1/template.md","mtime":"2019-02-26T13:13:33.138Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-26T13:13:49.957Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"模板","level":"1.2.6","depth":2,"next":{"title":"生命周期","level":"1.2.7","depth":2,"path":"chapter-1/lifecycle.md","ref":"chapter-1/lifecycle.md","articles":[]},"previous":{"title":"事件","level":"1.2.5","depth":2,"path":"chapter-1/methods.md","ref":"chapter-1/methods.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Chaihongjun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vue学习笔记","gitbook":"*","description":"Vue学习笔记"},"file":{"path":"chapter-1/template.md","mtime":"2019-02-27T01:10:41.442Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-27T01:11:19.588Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
