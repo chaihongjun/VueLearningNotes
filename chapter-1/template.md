@@ -59,12 +59,9 @@ Vue.component('my-checkbox', {
 </script>
 ```
 
-1. 内联模板
-2. render方法
-3. JSX
 4. SFC 单文件组件
 
-常用的还是第1，2，3，7的方法。
+单文件组件，`.vue`一个单独的一个文件就是一个组件，通过`export default`将本组件导出对外接口，本组件内通过`import`将其他组件引入。
 
 关于模板的定义可以参看复习：
 
