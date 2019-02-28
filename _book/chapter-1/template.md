@@ -8,7 +8,7 @@ Vue的模板语法允许以声明方式，将DOM和Vue的实例数据绑定起�
 
 简要内容：
 
-1. 字符串，将HTML模板内容包裹在引号内，以字符串形式表示，HTML模板内容必须连续书写
+1. 字符串，将HTML模板内容包裹在引号内，以字符串形式表示，HTML模板内容必须连续书写不能换行，比较少用这种。
 
 ```vue
 Vue.component('my-checkbox', { 
@@ -21,7 +21,7 @@ template: '<div class="checkbox-wrapper" @click="check"><div :class="{ checkbox:
     }});
 ```
 
-2. 模板字面量，使用`\``（反引号）方式将HTML模板包裹起来，允许换行。
+2. 模板字面量，使用`\``（反引号）方式将HTML模板包裹起来，允许换行，一般这种比较常用。
 
 ```vue
 Vue.component('my-checkbox', { 
@@ -37,7 +37,7 @@ template: `<div class="checkbox-wrapper" @click="check">
     }});
 ```
 
-3. x-Template
+3. x-Template 模板内容在`text/x-template`里面以script方式包裹起来的。优势是模板内容和组件分离，便于维护组件的模板内容。
 
 ```vue
 Vue.component('my-checkbox', { 
