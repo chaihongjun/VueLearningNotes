@@ -37,7 +37,7 @@ template: `<div class="checkbox-wrapper" @click="check">
     }});
 ```
 
-3. x-Template 模板内容在`text/x-template`里面以script方式包裹起来的。优势是模板内容和组件分离，便于维护组件的模板内容。
+3. x-Template 模板内容在`text/x-template`里面以script方式包裹起来的。优势是模板内容和组件分离，便于维护组件的模板内容，但是整体简洁性有一定损失。
 
 ```vue
 Vue.component('my-checkbox', { 
